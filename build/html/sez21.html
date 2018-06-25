@@ -1,0 +1,440 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>2.1. Aspetti di interoperabilità &mdash; Linee guida pubblicazione API E015  documentazione</title>
+               
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" /> 
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />  
+    <link rel="index" title="Indice" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
+    <link rel="top" title="Linee guida pubblicazione API E015  documentazione" href="index.html" />
+    <link rel="up" title="2. Descrittore dell’API" href="descriptor1.html" />
+    <link rel="next" title="2.2. Accesso sicuro alle API" href="sez22.html" />
+    <link rel="prev" title="2. Descrittore dell’API" href="descriptor1.html" />  
+    <script src="_static/js/modernizr.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,300,400,600,700,900" rel="stylesheet">
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+<div id="slimheader">
+    <!-- Pushy Menu -->
+<nav class="pushy pushy-left">
+    <div class="pushy-content">
+        <div class="pushy-close-button">
+        <a class="pushy-link" href="#">
+        <img src="data:image/png;base64,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">
+        </a>
+        </div><!--/pushy-close-button-->
+     
+    </div>
+</nav>
+
+<!-- Site Overlay -->
+<div class="site-overlay"></div>
+
+<!-- Your Content -->
+<div id="container">
+    <!-- Menu Button -->
+
+</div>
+<!--    <div class="sh__wrapper">
+    <div class="sh__institutional">
+        <a class="pushy-menu-btn menu-btn" href="#"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTkuMnB4IiBoZWlnaHQ9IjE2cHgiIHZpZXdCb3g9IjAgMCAxMiAxMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSIxMDI0dXAiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSItLWhvbWUtLS1wYXJhbGxheC0tLW1vYmlsZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI0LjAwMDAwMCwgLTIwLjAwMDAwMCkiIGZpbGw9IiNGRkZGRkYiPgogICAgICAgICAgICA8ZyBpZD0iLW5ldHdvcmstc2xpbS1oZWFkZXIiPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTI0LDI0IEwzNiwyNCBMMzYsMjYgTDI0LDI2IEwyNCwyNCBaIE0yNCwyMCBMMzIsMjAgTDMyLDIyIEwyNCwyMiBMMjQsMjAgWiBNMjQsMjggTDMyLDI4IEwzMiwzMCBMMjQsMzAgTDI0LDI4IFoiIGlkPSJpY29uLXNtYWxsLWJ1cmdlciI+PC9wYXRoPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4="></a>
+
+        
+    </div><!--/sh__institutional
+    <div class="sh__tabs">
+    <ul class="sh__tabsul">
+      
+    </ul>
+    </div><!--/.sh__tabs
+		<div class="burger" data-toggle="wy-nav-top">
+		  <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAzMiAzMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzIgMzI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+DQoJLnN0MHtmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik02LjEsOC45bDE3LDE3YzAuOCwwLjgsMi4xLDAuOCwyLjgsMGMwLjgtMC44LDAuOC0yLjEsMC0yLjhsLTE3LTE3Yy0wLjgtMC44LTIuMS0wLjgtMi44LDBTNS4zLDguMiw2LjEsOC45eiINCgkvPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTTIzLjEsNi4xbC0xNywxN2MtMC44LDAuOC0wLjgsMi4xLDAsMi44YzAuOCwwLjgsMi4xLDAuOCwyLjgsMGwxNy0xN2MwLjgtMC44LDAuOC0yLjEsMC0yLjgNCglDMjUuMSw1LjMsMjMuOCw1LjMsMjMuMSw2LjF6Ii8+DQo8L3N2Zz4=">
+		</div>
+    </div>  .wrapper-->
+</div><!--/#slimheader-->
+
+
+     
+    <div class="wy-grid-for-nav">
+
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+            <div class="wy-side-scroll">
+                <div class="wy-side-nav-search">
+                    
+
+                    <div class="branding clearfix">
+                        <div class="branding--logo">
+                            <a href="">
+                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 276.74 96.15"><defs><style>.cls-1{fill:#fff;}</style></defs><title>E015</title>
+                                    <path class="cls-1" d="M21.51,108.32H33.1V35.74H21.51V25.6H88.82V47.2H77.36V36.4H46.27V66.3H79.2V77.1H46.27v30.69H79.6V96.59H91.06v22H21.51Z" transform="translate(-21.51 -24.02)"/>
+                                    <path class="cls-1" d="M108.58,106.08c-5-8.69-7-20.68-7-34.12,0-26.74,8-47.94,32.93-47.94a30.44,30.44,0,0,1,17.65,5.14l2.11-3.56h13.3l-7.24,12.64c5,8.69,7.11,20.55,7.11,33.72,0,26.87-8.17,48.21-32.93,48.21-7.38,0-13.17-1.84-17.78-5l-2,3.42h-13.3Zm8.3-14.62L146,40.22a15.46,15.46,0,0,0-11.46-4.61C119.25,35.61,115,51.68,115,72A86.72,86.72,0,0,0,116.88,91.46ZM154,72a85.07,85.07,0,0,0-1.84-19.23L123.07,104c2.77,2.9,6.59,4.48,11.46,4.48C149.67,108.45,154,92.51,154,72Z" transform="translate(-21.51 -24.02)"/>
+                                    <path class="cls-1" d="M178,107.79h20.55V47.2c0-2.9.13-5.66.13-5.66h-.26a24.79,24.79,0,0,1-4.48,5.27l-8.69,8.56-7.9-8.17L199.6,25.6h11.59v82.19h20.28v10.8H178Z" transform="translate(-21.51 -24.02)"/>
+                                    <path class="cls-1" d="M243.33,36.4l1.05-10.8h48.08V47.2H281V36.4H255.71l-2.37,22.26c-.26,1.71-.66,3.69-.66,3.69h.26a28.91,28.91,0,0,1,13.17-2.9c19.23,0,32.14,12.91,32.14,29.51,0,17.52-14.36,31.22-33.72,31.22C251.5,120,234,112.27,234,98a10.4,10.4,0,0,1,10.41-10.67c6.19,0,9.88,4.21,9.88,9.88,0,3.16-2.24,6.45-4.22,8.17,3.43,2.63,9.75,3.69,14.09,3.69,11.72,0,21.21-7.64,21.21-19.63s-8.83-19.23-21.6-19.23A29.61,29.61,0,0,0,247.41,75l-7.64-2.77Z" transform="translate(-21.51 -24.02)"/>
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="branding--content">
+                            <h2 class="branding--title">
+                                <span class="branding--title--branch">/ Docs</span>
+                            </h2>
+                        </div>
+                    </div>
+
+                    
+                    
+                    <h1 class="project-title"><a href="index.html" > Linee guida pubblicazione API E015 </a>
+                       
+                      
+                      <br/><small>versione: </small><span class="version">2.0</span>
+                    </h1>
+                       
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Cerca nel documento" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div> 
+                </div>
+
+                <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                     
+                    
+                      
+                    
+                    
+                      <p class="caption"><span class="caption-text">Indice:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="process.html">1. Processo di pubblicazione delle API in E015 Digital Ecosystem</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="descriptor1.html">2. Descrittore dell’API</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.1. Aspetti di interoperabilità</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gli-aspetti-di-interoperabilita-allinterno-del-descrittore-dell-api">2.1.1. Gli aspetti di interoperabilità all’interno del descrittore dell’ API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stardard-tecnologici-e-linee-guida-per-l-interoperabilita">2.1.2. Stardard tecnologici e Linee Guida per l’interoperabilità</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sez22.html">2.2. Accesso sicuro alle API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sez22.html#gli-aspetti-di-sicurezza-allinterno-del-descrittore-dellapi">2.2.1. Gli aspetti di sicurezza all’interno del descrittore dell’API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sez22.html#lapproccio-dellecosistema-per-laccesso-sicuro-alle-api-da-parte-delle-applicazioni">2.2.2. L’approccio dell’Ecosistema per l’accesso sicuro alle API da parte delle Applicazioni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sez22.html#linee-guida-tecnologiche-per-la-gestione-dellaccesso-alle-api-meccanismo-di-attestazione">2.2.3. Linee guida tecnologiche per la gestione dell’accesso alle API (meccanismo di attestazione)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sez22.html#linee-guida-tecnologiche-per-la-gestione-degli-aspetti-di-sicurezza-delle-api">2.2.4. Linee guida tecnologiche per la gestione degli aspetti di sicurezza delle API</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sez23.html">2.3. Glossari delle API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sez23.html#gli-aspetti-relativi-ai-glossari-allinterno-del-descrittore-delle-api">2.3.1. Gli aspetti relativi ai glossari all’interno del descrittore delle API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sez23.html#linee-guida-per-la-gestione-dei-glossari-allinterno-dellecosistema">2.3.2. Linee Guida per la gestione dei glossari all’interno dell’Ecosistema</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sez24.html">2.4. Aspetti relativi al monitoraggio delle API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sez24.html#gli-aspetti-relativi-al-monitoraggio-allinterno-del-descrittore-delle-api">2.4.1. Gli aspetti relativi al monitoraggio all’interno del descrittore delle API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sez24.html#lapproccio-dellecosistema-per-il-monitoraggio-delle-api">2.4.2. L’approccio dell’Ecosistema per il monitoraggio delle API</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sez25.html">2.5. Aspetti correlati all'erogazione di una API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sez25.html#gli-aspetti-relativi-allerogazione-allinterno-del-descrittore-dell-api">2.5.1. Gli aspetti relativi all’erogazione all’interno del descrittore dell’ API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sez25.html#impegni-capacita-di-erogazione">2.5.2. Impegni / capacità di erogazione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sez25.html#logiche-di-remunerazione">2.5.3. Logiche di remunerazione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sez25.html#dimensionamento-dei-flussi-informativi">2.5.4. Dimensionamento dei flussi informativi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sez26.html">2.6. Aspetti legati all' azienda erogatrice delle API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sez26.html#gli-aspetti-relativi-allazienda-allinterno-del-descrittore-dell-api">2.6.1. Gli aspetti relativi all’azienda all’interno del descrittore dell’ API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sez26.html#linee-guida-per-la-gestione-degli-aspetti-relativi-allazienda">2.6.2. Linee Guida per la gestione degli aspetti relativi all’azienda</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sez26.html#linee-guida-per-la-pubblicazione-sul-proprio-sito-web-istituzionale-delle-informazioni-sulle-api-di-e015-digital-ecosystem">2.6.3. Linee Guida per la pubblicazione sul proprio sito web istituzionale delle informazioni sulle API di E015 Digital Ecosystem</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sez27.html">2.7. Ciclo di vita di una API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sez27.html#gli-aspetti-relativi-al-lifecycle-allinterno-del-descrittore-dell-api">2.7.1. Gli aspetti relativi al lifecycle all’interno del descrittore dell’API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sez27.html#il-ciclo-di-vita-delle-api-di-e015-digital-ecosystem">2.7.2. Il ciclo di vita delle API di E015 Digital Ecosystem</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sez28.html">2.8. Policies delle API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sez28.html#gli-aspetti-relativi-alle-policy-allinterno-del-descrittore-dellapi">2.8.1. Gli aspetti relativi alle policy all’interno del descrittore dell’API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sez28.html#approccio-dellecosistema-per-la-gestione-delle-policy-delle-api">2.8.2. Approccio dell’Ecosistema per la gestione delle policy delle API</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="verificheTMB.html">3. Verifiche del Technical Management Board per la pubblicazione delle API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="verificheTMB.html#elementi-di-verifica-da-parte-del-technical-management-board">3.1. Elementi di verifica da parte del Technical Management Board</a></li>
+<li class="toctree-l2"><a class="reference internal" href="verificheTMB.html#esito-del-processo-di-verifica">3.2. Esito del processo di verifica</a></li>
+</ul>
+</li>
+</ul>
+
+                    
+                    
+                </div>
+            </div>
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+           
+     <!--       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+				    
+                <div class="logo">
+                  <a href="https://docs.developers.italia.it">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 160 160">
+                    <g fill="none" fill-rule="evenodd">
+                      <path d="M0 0h160v160H0z"/>
+                      <path fill="#fff" d="M58.28 131.956V49.918h21.5v82.184h-21.5v-.146zm84.435-63.353h-19.65v33.72c0 3.358.143 5.547.285 7.007.143 1.314.712 2.482 1.71 3.504.996 1.02 2.562 1.46 4.698 1.46l12.245-.293.997 17.52c-7.12 1.606-12.673 2.48-16.375 2.48-9.682 0-16.232-2.19-19.65-6.713-3.56-4.38-5.267-12.554-5.267-24.524V27h21.5v22.772h19.65v18.83h-.143zM25.957 74.88c-3.702 0-6.834-1.314-9.255-3.94C14.282 68.31 13 65.1 13 61.303c0-3.795 1.28-7.007 3.56-9.634 2.42-2.63 5.553-3.798 9.255-3.798 3.702 0 6.835 1.314 9.255 3.942 2.42 2.627 3.56 5.84 3.56 9.78 0 3.942-1.14 7.007-3.56 9.635-2.278 2.335-5.268 3.65-9.113 3.65z"/>
+                    </g>
+                  </svg>
+                  </a>
+                </div>
+                <div class="title">
+                  <a href="index.html">Linee guida pubblicazione API E015</a>
+                </div>
+                <div class="burger" data-toggle="wy-nav-top">
+                  <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAzMiAzMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzIgMzI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+DQoJLnN0MHtmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik00LDhoMjRjMS4xLDAsMi0wLjksMi0ycy0wLjktMi0yLTJINEMyLjksNCwyLDQuOSwyLDZTMi45LDgsNCw4eiIvPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTTI4LDE0SDRjLTEuMSwwLTIsMC45LTIsMnMwLjksMiwyLDJoMjRjMS4xLDAsMi0wLjksMi0yUzI5LjEsMTQsMjgsMTR6Ii8+DQo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjgsMjRINGMtMS4xLDAtMiwwLjktMiwyczAuOSwyLDIsMmgyNGMxLjEsMCwyLTAuOSwyLTJTMjkuMSwyNCwyOCwyNHoiLz4NCjwvc3ZnPg==">
+                </div>
+            
+            </nav> -->
+
+            <div class="nav-overlay" data-toggle="wy-nav-top"></div>
+
+
+            
+            <div class="wy-nav-content">
+                <div class="rst-content">
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Indice</a> &raquo;</li>
+        
+          <li><a href="descriptor1.html">2. Descrittore dell’API</a> &raquo;</li>
+        
+      <li>2.1. Aspetti di interoperabilità</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+           
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+                    <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                        <div itemprop="articleBody">
+                            
+  <div class="section" id="aspetti-di-interoperabilita">
+<span id="sezione21"></span><h1>2.1. Aspetti di interoperabilità<a class="headerlink" href="#aspetti-di-interoperabilita" title="Link a questa intestazione">¶</a></h1>
+<style> p,td,li,ol {text-align:justify; word-wrap:break-word} </style>
+
+<style> p.caption {text-align:center;} </style><div class="section" id="gli-aspetti-di-interoperabilita-allinterno-del-descrittore-dell-api">
+<span id="sezione211"></span><h2>2.1.1. Gli aspetti di interoperabilità all’interno del descrittore dell’ API<a class="headerlink" href="#gli-aspetti-di-interoperabilita-allinterno-del-descrittore-dell-api" title="Link a questa intestazione">¶</a></h2>
+<p>Si riportano nella tabella seguente i campi del descrittore dell’API che indirizzano direttamente gli aspetti legati all’interoperabilità delle API.</p>
+<table border="1" class="docutils align-center" id="id1">
+<caption><span class="caption-text">Campi del descrittore relativi agli aspetti di interoperabilità</span><a class="headerlink" href="#id1" title="Link a questa tabella">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Fase del processo</th>
+<th class="head">Descrizione</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Tecnologia</td>
+<td>Tecnologia di riferimento con la quale l’API è stata implementata.</td>
+</tr>
+<tr class="row-odd"><td>Interfaccia dell’API</td>
+<td>Riferimento a uno o più file allegati al descrittore che documentano l’interfaccia dell’API  in modo completo per un utilizzatore. Per favorire l’interoperabilità all’interno dell’Ecosistema, il descrittore deve sempre contenere, in uno degli allegati, almeno un esempio di tracciato dati per ogni entità restituita. Tali documenti devono essere condivisi in formato editabile in modo che il Technical Management Board possa rimuovere gli endpoint dalla documentazione disponibile all’interno dell’ambiente di relazione. Tali endpoint non devono contenere indirizzi IP espliciti (es. 10.10.10.10) ma sempre nomi simbolici.</td>
+</tr>
+<tr class="row-even"><td>Modello dei dati</td>
+<td>Riferimento a uno o più file allegati al descrittore che documentano la struttura delle richieste e delle risposte in modo completo per un utilizzatore.</td>
+</tr>
+<tr class="row-odd"><td>Pattern di interazione</td>
+<td><p class="first">Paradigma di interazione con l’API. I valori ammissibili per questo attributo del descrittore sono:</p>
+<blockquote class="last">
+<div><ol class="arabic simple">
+<li>Request-response;</li>
+<li>Publish &amp; subscribe;</li>
+</ol>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Sono riportate nel seguito gli standard tecnologici e le relative linee guida per la gestione degli aspetti di interoperabilità delle API di E015 Digital Ecosystem.
+In particolare, le API di E015 Digital Ecosystem possono essere realizzate secondo uno dei due seguenti standard tecnologici:</p>
+<ul class="simple">
+<li>SOAP (Simple Object Access Protocol);</li>
+<li>REST (REpresentational State Transfer).</li>
+</ul>
+</div>
+<div class="section" id="stardard-tecnologici-e-linee-guida-per-l-interoperabilita">
+<span id="sezione212"></span><h2>2.1.2. Stardard tecnologici e Linee Guida per l’interoperabilità<a class="headerlink" href="#stardard-tecnologici-e-linee-guida-per-l-interoperabilita" title="Link a questa intestazione">¶</a></h2>
+<div class="section" id="tecnologie-per-le-api-soap">
+<span id="sezione2121"></span><h3>2.1.2.1. Tecnologie per le API SOAP<a class="headerlink" href="#tecnologie-per-le-api-soap" title="Link a questa intestazione">¶</a></h3>
+<p>I Web Service SOAP rappresentano un meccanismo consolidato, condiviso e diffuso a supporto delle interazioni applicative ‘machine-to-machine’.
+La Web Services Interoperability Organization (WS-I, <a class="reference external" href="http://www.oasis-ws-i.org/">http://www.oasis-ws-i.org/</a>), ha assunto il compito di definire <strong>profili di interoperabilità</strong> standard tra Web Service SOAP a diversi livelli. Ciascun profilo raccomanda un insieme “minimo” coerente di specifiche standard non proprietarie per promuovere e realizzare l’interoperabilità tra Web Service SOAP.
+Tra i profili WS-I, il <strong>WS-I Basic Profile</strong> (BP) si occupa in particolare di normare le dimensioni tecnologiche basilari per l’interoperabilità tra Web Services  (la specifica dell’interfaccia, la rappresentazione del modello dei dati, i meccanismi di trasporto e scambio messaggi ecc.).
+Esistono attualmente diverse versioni del WS-I Basic Profile (v1.0 errata: 25 ottobre 2005, v1.1 final: 10 aprile 2006, v1.2 e v2.0 final: 9 novembre 2010), le più recenti delle quali sono riassunte nella tabella che segue.
+Per ciascuna versione del BP la tabella riassume le tecnologie citate, raggruppate per categoria, evidenziando le principali differenze e le novità rispetto alla versione precedente del profilo.</p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="_images/versioniWSbasicprofile.png"><img alt="_images/versioniWSbasicprofile.png" src="_images/versioniWSbasicprofile.png" style="width: 1123.2px; height: 688.8px;" /></a>
+<p class="caption"><span class="caption-text">Figura 2.2: Versioni del WS-I Basic Profile a confronto</span></p>
+</div>
+<p><strong>Il punto di riferimento iniziale a supporto dell’interoperabilità dei Web Services SOAP in E015 Digital Ecosystem è il WS-I Basic Profile versione 1.1.</strong></p>
+<p>Inoltre, a corredo o a complemento delle diverse versioni del BP, la OASIS WS-I organization ha definito i seguenti profili:</p>
+<ul class="simple">
+<li>Simple SOAP Binding Profile (v1.0 final: 24 agosto 2004): indica requisiti specifici sulla serializzazione delle buste SOAP e la relativa rappresentazione nei messaggi di richiesta e risposta.</li>
+<li>Attachments Profile (v1.0 final: 20 aprile 2006): complementare al BP 1.1 relativamente all’uso di SOAP with Attachments.</li>
+<li>Basic Security Profile (v1.0 final errata: 5 luglio 2010, v1.1 final: 24 gennaio 2010): Fornisce requisiti specifici per rappresentare e veicolare le informazioni di sicurezza legate a un Web API. Le considerazioni relative alla sicurezza dei API SOAP sono riportate nella <a class="reference internal" href="sez22.html#sezione2241"><span class="std std-ref">Sezione 2.2.4.1</span></a>.</li>
+</ul>
+<div class="section" id="considerazioni-sul-modello-dei-dati">
+<h4>2.1.2.1.1. Considerazioni sul modello dei dati<a class="headerlink" href="#considerazioni-sul-modello-dei-dati" title="Link a questa intestazione">¶</a></h4>
+<p>La selezione congiunta di un sottoinsieme di tecnologie standard è un elemento abilitante per l’interoperabilità applicativa; tuttavia è necessario indirizzare altri aspetti legati all’interoperabilità e relativi alle modalità di utilizzo degli standard tecnologici selezionati.
+Da questo punto di vista, il <strong>modello dei dati</strong> su cui si basano le interfacce delle API riveste un ruolo di particolare importanza. In generale, le specifiche dei Web API non entrano nel merito del modello dei dati di una API. Per garantire l’interoperabilità e la qualità delle API esposte in E015 Digital Ecosystem, in aggiunta alle specifiche tecniche, occorre introdurre opportune linee guida relative al modello dei dati e in generale all’interfaccia di una API.</p>
+<p><strong>Uso di XLM Schema</strong></p>
+<ul class="simple">
+<li>È opportuno fare riferimento a tipi standard della specifica XML Schema anziché creare tipi “custom” (esempi: ‘xs:date’, ‘xs:duration’, ‘xs:gYear’);</li>
+<li>Si sconsiglia di utilizzare tipi generici (es. ‘xs:string’) per rappresentare dati strutturati;</li>
+<li>In caso di campi alfanumerici aventi una formattazione specifica, è opportuno restringere l’uso del tipo ‘xs:string’ utilizzando opportuni pattern (esempi: ‘CAP’, ‘codice fiscale’, ‘codice Istat comune’);</li>
+<li>Valutare sempre l’uso di tipi già definiti nei Glossari condivisi dell’Ecosistema (esempi: ‘visitatore’, ‘point of interest’, ‘evento’).</li>
+</ul>
+<p><strong>WSDL(http://www.w3.org/TR/wsdl) e parametri di input e output</strong></p>
+<ul class="simple">
+<li>Si sconsiglia di utilizzare tipi “opachi” (per esempio in formato ‘base64binary’) nei parametri di input e output di una API: l’uso di tipi non opachi abilita controlli strutturali (validazione rispetto allo schema XML) che possono essere effettuati già a livello di interfaccia anziché essere rimandati a livello applicativo affidandoli alla logica interna di funzionamento del singolo API.</li>
+<li>Adottare sempre, quando possibile, il Document/Literal Style.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="tecnologie-per-le-api-rest">
+<span id="sezione2122"></span><h3>2.1.2.2. Tecnologie per le API REST<a class="headerlink" href="#tecnologie-per-le-api-rest" title="Link a questa intestazione">¶</a></h3>
+<p>Le API REST rappresentano una modalità alternativa per la pubblicazione e fruizione di API su protocollo HTTP rispetto a API di tipo SOAP. REST non impone particolari vincoli sulle tecnologie da adottare, per esempio relativamente alla descrizione dell’interfaccia o al modello dei dati. Tuttavia esistono alcune specifiche che possono essere utilizzate in ambito REST per coprire determinate dimensioni di interoperabilità (es. OpenAPI/Swagger per la descrizione dell’interfaccia di un API).</p>
+<p>Le API REST pubblicate in E015 Digital Ecosystem devono essere accompagnate da una adeguata documentazione, in particolare per quanto riguarda:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Il modello e il formato dei dati;</li>
+<li>Le operazioni fornite dalla API.</li>
+</ul>
+</div></blockquote>
+<p>Il presente requisito può essere soddisfatto allegando una descrizione dell’API formulata mediante uno dei linguaggi di descrizione di API REST quali, ad esempio, OpenAPI 3.0, OpenAPI 2.0 (anche noto come Swagger 2.0). Il linguaggio di descrizione OpenAPI è attualmente supportato dal consorzio Open API Initative (<a class="reference external" href="https://www.openapis.org/">https://www.openapis.org/</a>).
+In alternativa, per il modello dei dati delle API REST si richiede di utilizzare in particolare:</p>
+<ul class="simple">
+<li>XML Schema (<a class="reference external" href="http://www.w3.org/XML/Schema">http://www.w3.org/XML/Schema</a>) per i dati in formato XML;</li>
+<li>JSON Schema (<a class="reference external" href="http://json-schema.org/">http://json-schema.org/</a>) per i dati in formato JSON.</li>
+</ul>
+<p>Per la pubblicazione e il discovery di API REST si può fare riferimento agli standard Atom (<a class="reference external" href="http://www.ietf.org/rfc/rfc4287.txt">http://www.ietf.org/rfc/rfc4287.txt</a>). Per realizzare la sicurezza di canale è opportuno utilizzare sempre il protocollo HTTPS. Per ulteriori considerazioni relative alla sicurezza dei API REST si veda la <a class="reference internal" href="sez22.html#sezione2242"><span class="std std-ref">Sezione 2.2.4.2</span></a>.</p>
+</div>
+<div class="section" id="tecnologie-per-le-api-publish-subscribe">
+<span id="sezione2123"></span><h3>2.1.2.3. Tecnologie per le API Publish/Subscribe<a class="headerlink" href="#tecnologie-per-le-api-publish-subscribe" title="Link a questa intestazione">¶</a></h3>
+<p>E015 Digital Ecosystem intende supportare scenari in cui da una parte vi sono soggetti, per esempio le API, che pubblicano notifiche (notify) e dall’altra vi sono altri soggetti, per esempio le applicazioni, che sono interessati a ricevere notifiche per erogare le proprie funzionalità (subscribe).</p>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="_images/approcciopublishsubscribe.png"><img alt="_images/approcciopublishsubscribe.png" src="_images/approcciopublishsubscribe.png" style="width: 538.5px; height: 356.5px;" /></a>
+<p class="caption"><span class="caption-text">Figura 2.3: Approccio al publish/subscribe nell’Ecosistema</span></p>
+</div>
+<p>Nell’ambito dell’Ecosistema è possibile adottare i seguenti due approcci (non mutuamente esclusivi) al Publish/Subscribe:</p>
+<ul class="simple">
+<li>Notification Dispatcher pubblicato dal singolo API Provider: in questo caso è il singolo provider dell’API a implementare internamente la logica di subscribe e notify necessaria a supportare il funzionamento della propria API (es. propagazione di informazioni ai soggetti interessati);</li>
+<li>Broker Publish/Subscribe esposto da un API Provider: in questo caso l’API di sottoscrizione e notifica è fornita come API trasversale erogata da un provider di E015 Digital Ecosystem e messa a disposizione di altri soggetti. Per esempio, può trattarsi di API di notifica dedicate destinate a domini verticali o specifiche categorie di eventi.</li>
+</ul>
+<p>La tecnologia di riferimento è WS-Notification (<a class="reference external" href="http://www.oasis-open.org/committees/wsn/">http://www.oasis-open.org/committees/wsn/</a>), attuale specifica di riferimento in ambito Web Service SOAP.
+Nel caso in cui si intendesse pubblicare all’interno dell’Ecosistema una API di tipo Publish/Subscribe è necessario assegnare all’attributo “Pattern di interazione” del descrittore dell’API il valore <strong>Publish&amp;Subscribe</strong>.
+Qualora invece si intendesse pubblicare una API sincrona di tipo request-response è necessario assegnare all’attributo “Pattern di interazione” del descrittore del API il valore <strong>Request-Response</strong>.</p>
+</div>
+</div>
+</div>
+
+
+                        </div>
+                        <div class="articleComments">
+                            
+                        </div>
+                    </div>
+                    <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="sez22.html" class="btn float-right" title="2.2. Accesso sicuro alle API" accesskey="n" rel="next">Successivo <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="descriptor1.html" class="btn" title="2. Descrittore dell’API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Precedente</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        E015 Technical Management Board.
+
+    </p>
+  </div>
+  Generato con <a href="http://sphinx-doc.org/">Sphinx</a> usando il tema ufficiale <a href="https://github.com/italia/sphinx_italia_theme">Italia</a> basato sul <a href="https://github.com/snide/sphinx_rtd_theme">tema</a> fornito da <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+    
+     
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT: './',
+            VERSION: '',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE: true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>   
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+      
+    <script type="text/javascript">
+        jQuery(function() {
+            SphinxRtdTheme.StickyNav.enable();
+        });
+    </script>
+     
+
+</body>
+
+</html>

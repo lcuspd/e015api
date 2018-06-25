@@ -1,0 +1,1191 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Descrittore dell” API &mdash; Linee guida pubblicazione API E015 0.0.1 documentazione</title>
+               
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" /> 
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />  
+    <link rel="index" title="Indice" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
+    <link rel="top" title="Linee guida pubblicazione API E015 0.0.1 documentazione" href="index.html" />  
+    <script src="_static/js/modernizr.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,300,400,600,700,900" rel="stylesheet">
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+<div id="slimheader">
+    <!-- Pushy Menu -->
+<nav class="pushy pushy-left">
+    <div class="pushy-content">
+        <div class="pushy-close-button">
+        <a class="pushy-link" href="#">
+        <img src="data:image/png;base64,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">
+        </a>
+        </div><!--/pushy-close-button-->
+     
+    </div>
+</nav>
+
+<!-- Site Overlay -->
+<div class="site-overlay"></div>
+
+<!-- Your Content -->
+<div id="container">
+    <!-- Menu Button -->
+
+</div>
+<!--    <div class="sh__wrapper">
+    <div class="sh__institutional">
+        <a class="pushy-menu-btn menu-btn" href="#"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTkuMnB4IiBoZWlnaHQ9IjE2cHgiIHZpZXdCb3g9IjAgMCAxMiAxMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSIxMDI0dXAiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSItLWhvbWUtLS1wYXJhbGxheC0tLW1vYmlsZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI0LjAwMDAwMCwgLTIwLjAwMDAwMCkiIGZpbGw9IiNGRkZGRkYiPgogICAgICAgICAgICA8ZyBpZD0iLW5ldHdvcmstc2xpbS1oZWFkZXIiPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTI0LDI0IEwzNiwyNCBMMzYsMjYgTDI0LDI2IEwyNCwyNCBaIE0yNCwyMCBMMzIsMjAgTDMyLDIyIEwyNCwyMiBMMjQsMjAgWiBNMjQsMjggTDMyLDI4IEwzMiwzMCBMMjQsMzAgTDI0LDI4IFoiIGlkPSJpY29uLXNtYWxsLWJ1cmdlciI+PC9wYXRoPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4="></a>
+
+        
+    </div><!--/sh__institutional
+    <div class="sh__tabs">
+    <ul class="sh__tabsul">
+      
+    </ul>
+    </div><!--/.sh__tabs
+		<div class="burger" data-toggle="wy-nav-top">
+		  <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAzMiAzMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzIgMzI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+DQoJLnN0MHtmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik02LjEsOC45bDE3LDE3YzAuOCwwLjgsMi4xLDAuOCwyLjgsMGMwLjgtMC44LDAuOC0yLjEsMC0yLjhsLTE3LTE3Yy0wLjgtMC44LTIuMS0wLjgtMi44LDBTNS4zLDguMiw2LjEsOC45eiINCgkvPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTTIzLjEsNi4xbC0xNywxN2MtMC44LDAuOC0wLjgsMi4xLDAsMi44YzAuOCwwLjgsMi4xLDAuOCwyLjgsMGwxNy0xN2MwLjgtMC44LDAuOC0yLjEsMC0yLjgNCglDMjUuMSw1LjMsMjMuOCw1LjMsMjMuMSw2LjF6Ii8+DQo8L3N2Zz4=">
+		</div>
+    </div>  .wrapper-->
+</div><!--/#slimheader-->
+
+
+     
+    <div class="wy-grid-for-nav">
+
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+            <div class="wy-side-scroll">
+                <div class="wy-side-nav-search">
+                    
+
+                    <div class="branding clearfix">
+                        <div class="branding--logo">
+                            <a href="">
+                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 276.74 96.15"><defs><style>.cls-1{fill:#fff;}</style></defs><title>E015</title>
+                                    <path class="cls-1" d="M21.51,108.32H33.1V35.74H21.51V25.6H88.82V47.2H77.36V36.4H46.27V66.3H79.2V77.1H46.27v30.69H79.6V96.59H91.06v22H21.51Z" transform="translate(-21.51 -24.02)"/>
+                                    <path class="cls-1" d="M108.58,106.08c-5-8.69-7-20.68-7-34.12,0-26.74,8-47.94,32.93-47.94a30.44,30.44,0,0,1,17.65,5.14l2.11-3.56h13.3l-7.24,12.64c5,8.69,7.11,20.55,7.11,33.72,0,26.87-8.17,48.21-32.93,48.21-7.38,0-13.17-1.84-17.78-5l-2,3.42h-13.3Zm8.3-14.62L146,40.22a15.46,15.46,0,0,0-11.46-4.61C119.25,35.61,115,51.68,115,72A86.72,86.72,0,0,0,116.88,91.46ZM154,72a85.07,85.07,0,0,0-1.84-19.23L123.07,104c2.77,2.9,6.59,4.48,11.46,4.48C149.67,108.45,154,92.51,154,72Z" transform="translate(-21.51 -24.02)"/>
+                                    <path class="cls-1" d="M178,107.79h20.55V47.2c0-2.9.13-5.66.13-5.66h-.26a24.79,24.79,0,0,1-4.48,5.27l-8.69,8.56-7.9-8.17L199.6,25.6h11.59v82.19h20.28v10.8H178Z" transform="translate(-21.51 -24.02)"/>
+                                    <path class="cls-1" d="M243.33,36.4l1.05-10.8h48.08V47.2H281V36.4H255.71l-2.37,22.26c-.26,1.71-.66,3.69-.66,3.69h.26a28.91,28.91,0,0,1,13.17-2.9c19.23,0,32.14,12.91,32.14,29.51,0,17.52-14.36,31.22-33.72,31.22C251.5,120,234,112.27,234,98a10.4,10.4,0,0,1,10.41-10.67c6.19,0,9.88,4.21,9.88,9.88,0,3.16-2.24,6.45-4.22,8.17,3.43,2.63,9.75,3.69,14.09,3.69,11.72,0,21.21-7.64,21.21-19.63s-8.83-19.23-21.6-19.23A29.61,29.61,0,0,0,247.41,75l-7.64-2.77Z" transform="translate(-21.51 -24.02)"/>
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="branding--content">
+                            <h2 class="branding--title">
+                                <span class="branding--title--branch">/ Docs</span>
+                            </h2>
+                        </div>
+                    </div>
+
+                    
+                    
+                    <h1 class="project-title"><a href="index.html" > Linee guida pubblicazione API E015 </a>
+                       
+                      
+                      <br/><small>versione: </small><span class="version">0.0.1</span>
+                    </h1>
+                       
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Cerca nel documento" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div> 
+                </div>
+
+                <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                     
+                    
+                      
+                    
+                    
+                      <p class="caption"><span class="caption-text">Indice:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="process.html">1. Processo di pubblicazione delle API in E015 Digital Ecosystem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="descriptor1.html">2. Descrittore dell” API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sez21.html">2.1. Aspetti di interoperabilità</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sez21.html#gli-aspetti-di-interoperabilita-allinterno-del-descrittore-dell-api">2.1.1. Gli aspetti di interoperabilità all’interno del descrittore dell’ API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sez21.html#stardard-tecnologici-e-linee-guida-per-l-interoperabilita">2.1.2. Stardard tecnologici e Linee Guida per l’interoperabilità</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sez22.html">2.2. Accesso sicuro alle API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sez22.html#gli-aspetti-di-sicurezza-allinterno-del-descrittore-dellapi">2.2.1. Gli aspetti di sicurezza all’interno del descrittore dell’API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sez22.html#lapproccio-dellecosistema-per-laccesso-sicuro-alle-api-da-parte-delle-applicazioni">2.2.2. L’approccio dell’Ecosistema per l’accesso sicuro alle API da parte delle Applicazioni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sez22.html#linee-guida-tecnologiche-per-la-gestione-dellaccesso-alle-api-meccanismo-di-attestazione">2.2.3. Linee guida tecnologiche per la gestione dell’accesso alle API (meccanismo di attestazione)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sez22.html#linee-guida-tecnologiche-per-la-gestione-degli-aspetti-di-sicurezza-delle-api">2.2.4. Linee guida tecnologiche per la gestione degli aspetti di sicurezza delle API</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sez23.html">2.3. Glossari delle API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sez23.html#gli-aspetti-relativi-ai-glossari-allinterno-del-descrittore-delle-api">2.3.1. Gli aspetti relativi ai glossari all’interno del descrittore delle API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sez23.html#linee-guida-per-la-gestione-dei-glossari-allinterno-dellecosistema">2.3.2. Linee Guida per la gestione dei glossari all’interno dell’Ecosistema</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sez24.html">2.4. Aspetti relativi al monitoraggio delle API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sez24.html#gli-aspetti-relativi-al-monitoraggio-allinterno-del-descrittore-delle-api">2.4.1. Gli aspetti relativi al monitoraggio all’interno del descrittore delle API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sez24.html#lapproccio-dellecosistema-per-il-monitoraggio-delle-api">2.4.2. L’approccio dell’Ecosistema per il monitoraggio delle API</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sez25.html">2.5. Aspetti correlati all'erogazione di una API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sez25.html#gli-aspetti-relativi-allerogazione-allinterno-del-descrittore-dell-api">2.5.1. Gli aspetti relativi all’erogazione all’interno del descrittore dell’ API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sez25.html#impegni-capacita-di-erogazione">2.5.2. Impegni / capacità di erogazione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sez25.html#logiche-di-remunerazione">2.5.3. Logiche di remunerazione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sez25.html#dimensionamento-dei-flussi-informativi">2.5.4. Dimensionamento dei flussi informativi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sez26.html">2.6. Aspetti legati all' azienda erogatrice delle API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sez26.html#gli-aspetti-relativi-allazienda-allinterno-del-descrittore-dell-api">2.6.1. Gli aspetti relativi all’azienda all’interno del descrittore dell’ API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sez26.html#linee-guida-per-la-gestione-degli-aspetti-relativi-allazienda">2.6.2. Linee Guida per la gestione degli aspetti relativi all’azienda</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sez26.html#linee-guida-per-la-pubblicazione-sul-proprio-sito-web-istituzionale-delle-informazioni-sulle-api-di-e015-digital-ecosystem">2.6.3. Linee Guida per la pubblicazione sul proprio sito web istituzionale delle informazioni sulle API di E015 Digital Ecosystem</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sez27.html">2.7. Ciclo di vita di una API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sez27.html#gli-aspetti-relativi-al-lifecycle-allinterno-del-descrittore-dell-api">2.7.1. Gli aspetti relativi al lifecycle all’interno del descrittore dell” API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sez27.html#il-ciclo-di-vita-delle-api-di-e015-digital-ecosystem">2.7.2. Il ciclo di vita delle API di E015 Digital Ecosystem</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sez28.html">2.8. Policies delle API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sez28.html#gli-aspetti-relativi-alle-policy-allinterno-del-descrittore-dellapi">2.8.1. Gli aspetti relativi alle policy all’interno del descrittore dell’API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sez28.html#approccio-dellecosistema-per-la-gestione-delle-policy-delle-api">2.8.2. Approccio dell’Ecosistema per la gestione delle policy delle API</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="verificheTMB.html">3. Verifiche del Technical Management Board per la pubblicazione delle API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="verificheTMB.html#elementi-di-verifica-da-parte-del-technical-management-board">3.1. Elementi di verifica da parte del Technical Management Board</a></li>
+<li class="toctree-l2"><a class="reference internal" href="verificheTMB.html#esito-del-processo-di-verifica">3.2. Esito del processo di verifica</a></li>
+</ul>
+</li>
+</ul>
+
+                    
+                    
+                </div>
+            </div>
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+           
+     <!--       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+				    
+                <div class="logo">
+                  <a href="https://docs.developers.italia.it">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 160 160">
+                    <g fill="none" fill-rule="evenodd">
+                      <path d="M0 0h160v160H0z"/>
+                      <path fill="#fff" d="M58.28 131.956V49.918h21.5v82.184h-21.5v-.146zm84.435-63.353h-19.65v33.72c0 3.358.143 5.547.285 7.007.143 1.314.712 2.482 1.71 3.504.996 1.02 2.562 1.46 4.698 1.46l12.245-.293.997 17.52c-7.12 1.606-12.673 2.48-16.375 2.48-9.682 0-16.232-2.19-19.65-6.713-3.56-4.38-5.267-12.554-5.267-24.524V27h21.5v22.772h19.65v18.83h-.143zM25.957 74.88c-3.702 0-6.834-1.314-9.255-3.94C14.282 68.31 13 65.1 13 61.303c0-3.795 1.28-7.007 3.56-9.634 2.42-2.63 5.553-3.798 9.255-3.798 3.702 0 6.835 1.314 9.255 3.942 2.42 2.627 3.56 5.84 3.56 9.78 0 3.942-1.14 7.007-3.56 9.635-2.278 2.335-5.268 3.65-9.113 3.65z"/>
+                    </g>
+                  </svg>
+                  </a>
+                </div>
+                <div class="title">
+                  <a href="index.html">Linee guida pubblicazione API E015</a>
+                </div>
+                <div class="burger" data-toggle="wy-nav-top">
+                  <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAzMiAzMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzIgMzI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+DQoJLnN0MHtmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik00LDhoMjRjMS4xLDAsMi0wLjksMi0ycy0wLjktMi0yLTJINEMyLjksNCwyLDQuOSwyLDZTMi45LDgsNCw4eiIvPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTTI4LDE0SDRjLTEuMSwwLTIsMC45LTIsMnMwLjksMiwyLDJoMjRjMS4xLDAsMi0wLjksMi0yUzI5LjEsMTQsMjgsMTR6Ii8+DQo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjgsMjRINGMtMS4xLDAtMiwwLjktMiwyczAuOSwyLDIsMmgyNGMxLjEsMCwyLTAuOSwyLTJTMjkuMSwyNCwyOCwyNHoiLz4NCjwvc3ZnPg==">
+                </div>
+            
+            </nav> -->
+
+            <div class="nav-overlay" data-toggle="wy-nav-top"></div>
+
+
+            
+            <div class="wy-nav-content">
+                <div class="rst-content">
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Indice</a> &raquo;</li>
+        
+      <li>Descrittore dell” API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+           
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+                    <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                        <div itemprop="articleBody">
+                            
+  <div class="section" id="descrittore-dell-api">
+<span id="capitolo2"></span><h1>Descrittore dell” API<a class="headerlink" href="#descrittore-dell-api" title="Link a questa intestazione">¶</a></h1>
+<p>L’elemento cardine per la pubblicazione delle API all’interno di E015 Digital Ecosystem è rappresentato dal <em>“Descrittore dell’API”</em>.
+Il <em>“Descrittore dell’API”</em> indirizza nel suo complesso tematiche di tipo tecnologico – per consentire l’integrazione delle API all’interno delle applicazioni –e fornisce numerose informazioni sull’API, tenendo in considerazione  aspetti di tipo organizzativo e di policy che regolamentano l’utilizzo dell’API stessa.
+In <a class="reference internal" href="#dimensioninterest"><span class="std std-ref">Figura 2.1</span></a> sono riportate tutte le caratteristiche necessarie alla documentazione delle API condivise all’interno dell’Ecosistema, da dettagliare nel documento specifico.</p>
+<div class="figure align-center" id="id4">
+<span id="dimensioninterest"></span><a class="reference internal image-reference" href="_images/dimensioniinteresse.png"><img alt="_images/dimensioniinteresse.png" src="_images/dimensioniinteresse.png" style="width: 413.2px; height: 312.0px;" /></a>
+<p class="caption"><span class="caption-text">Figura 2.1: Dimensioni di interesse per la descrizione delle API di E015 Digital Ecosystem</span></p>
+</div>
+<p>È necessario che ognuna di queste dimensioni sia adeguatamente documentata affinché una API possa essere pubblicata all’interno dell’Ecosistema.
+Di seguito un breve riassunto delle dimensioni di interesse indirizzate dal “Descrittore dell’API”:</p>
+<ul class="simple">
+<li><em>Aspetti di interoperabilità</em>: rientrano in questa categoria tutti gli aspetti di tipo tecnico necessari per poter invocare le API pubblicate all’interno dell’Ecosistema ed integrarle all’interno delle Applicazioni (per esempio, la documentazione dell’interfaccia dell’API);</li>
+<li><em>Accesso sicuro alle API</em>: rientrano in questa categoria tutti gli aspetti tecnologici ed organizzativi necessari per la gestione degli aspetti di sicurezza legati all’erogazione delle API (ad esempio, per la restrizione dell’accesso alle API ai soli soggetti autorizzati da parte dell’API Provider, per mezzo di uno specifico meccanismo in seguito denominato “meccanismo di attestazione”);</li>
+<li><em>Glossari delle API</em>: aspetti di documentazione legati al modello dei dati gestiti dalla API (entità, concetti e loro rappresentazione);</li>
+<li><em>Aspetti di monitoraggio delle API</em>: rientrano in questa categoria tutti gli aspetti necessari affinché E015 Digital Ecosystem sia in grado di monitorare costantemente la disponibilità delle API messe a disposizione da parte degli API Provider;</li>
+<li><em>Aspetti correlati all’erogazione delle API</em>: rientrano in questa categoria gli aspetti riguardanti eventuali “Logiche di remunerazione” correlate all’utilizzo delle API e gli aspetti di “Qualità” di erogazione delle API;</li>
+<li><em>Aspetti legati all’azienda</em>: rientrano in questa categoria gli aspetti di tipo organizzativo e di comunicazione, correlati all’erogazione delle API (es: referente dell’API verso E015 Digital Ecosystem);</li>
+<li><em>Policies delle API</em>: sezione del descrittore riportante i termini e le condizioni di utilizzo con cui sono esposte le API sull’Ecosistema e che ciascun soggetto utilizzatore dell’API si deve impegnare a rispettare nei confronti dell’API Provider.</li>
+</ul>
+<p>Nei prossimi paragrafi vengono forniti tutti i dettagli e le indicazioni operative per indirizzare ciascuna di queste dimensioni.</p>
+<div class="section" id="aspetti-di-interoperabilita">
+<span id="sezione21"></span><h2>Aspetti di interoperabilità<a class="headerlink" href="#aspetti-di-interoperabilita" title="Link a questa intestazione">¶</a></h2>
+<div class="section" id="gli-aspetti-di-interoperabilita-allinterno-del-descrittore-dell-api">
+<span id="sezione211"></span><h3>Gli aspetti di interoperabilità all’interno del descrittore dell’ API<a class="headerlink" href="#gli-aspetti-di-interoperabilita-allinterno-del-descrittore-dell-api" title="Link a questa intestazione">¶</a></h3>
+<p>Si riportano nella tabella seguente i campi del descrittore dell’API che indirizzano direttamente gli aspetti legati all’interoperabilità delle API.</p>
+<table border="1" class="docutils align-center" id="id5">
+<caption><span class="caption-text">Campi del descrittore relativi agli aspetti di interoperabilità</span><a class="headerlink" href="#id5" title="Link a questa tabella">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Fase del processo</th>
+<th class="head">Descrizione</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Tecnologia</td>
+<td><div class="first last line-block">
+<div class="line">Tecnologia di riferimento con la quale l’API</div>
+<div class="line">è stata implementata.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="first last line-block">
+<div class="line">Interfaccia dell’API</div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line">Riferimento a uno o più file allegati al descrittore</div>
+<div class="line">che documentano l’interfaccia dell’API  in modo completo</div>
+<div class="line">per un utilizzatore. Per favorire l’interoperabilità</div>
+<div class="line">all’interno dell’Ecosistema, il descrittore deve sempre</div>
+<div class="line">contenere, in uno degli allegati,almeno un esempio di</div>
+<div class="line">tracciato dati per ogni entità restituita. Tali documenti</div>
+<div class="line">devono essere condivisi in formato editabile in modo che</div>
+<div class="line">il Technical Management Board possa rimuovere gli endpoint</div>
+<div class="line">dalla documentazione disponibile all’interno dell’ambiente</div>
+<div class="line">di relazione. Tali endpoint non devono contenere indirizzi</div>
+<div class="line">IP espliciti (es. 10.10.10.10) ma sempre nomi simbolici.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last line-block">
+<div class="line">Modello</div>
+<div class="line">dei dati</div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line">Riferimento a uno o più file allegati al descrittore che</div>
+<div class="line">documentano la struttura delle richieste e delle risposte</div>
+<div class="line">in modo completo per un utilizzatore.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="first last line-block">
+<div class="line">Pattern di</div>
+<div class="line">interazione</div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line">Paradigma di interazione con l’API.</div>
+<div class="line">I valori ammissibili per questo attributo del</div>
+<div class="line">descrittore sono:</div>
+<div class="line-block">
+<div class="line">1. Request-response;</div>
+<div class="line">1. Publish &amp; subscribe;</div>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Sono riportate nel seguito gli standard tecnologici e le relative linee guida per la gestione degli aspetti di interoperabilità delle API di E015 Digital Ecosystem.
+In particolare, le API di E015 Digital Ecosystem possono essere realizzate secondo uno dei due seguenti standard tecnologici:</p>
+<ul class="simple">
+<li>SOAP (Simple Object Access Protocol);</li>
+<li>REST (REpresentational State Transfer).</li>
+</ul>
+</div>
+<div class="section" id="stardard-tecnologici-e-linee-guida-per-l-interoperabilita">
+<span id="sezione212"></span><h3>Stardard tecnologici e Linee Guida per l’interoperabilità<a class="headerlink" href="#stardard-tecnologici-e-linee-guida-per-l-interoperabilita" title="Link a questa intestazione">¶</a></h3>
+<div class="section" id="tecnologie-per-le-api-soap">
+<span id="sezione2121"></span><h4>Tecnologie per le API SOAP<a class="headerlink" href="#tecnologie-per-le-api-soap" title="Link a questa intestazione">¶</a></h4>
+<p>I Web Service SOAP rappresentano un meccanismo consolidato, condiviso e diffuso a supporto delle interazioni applicative ‘machine-to-machine’.
+La Web Services Interoperability Organization (WS-I, <a class="reference external" href="http://www.oasis-ws-i.org/">http://www.oasis-ws-i.org/</a>), ha assunto il compito di definire <strong>profili di interoperabilità</strong> standard tra Web Service SOAP a diversi livelli. Ciascun profilo raccomanda un insieme “minimo” coerente di specifiche standard non proprietarie per promuovere e realizzare l’interoperabilità tra Web Service SOAP.
+Tra i profili WS-I, il <strong>WS-I Basic Profile</strong> (BP) si occupa in particolare di normare le dimensioni tecnologiche basilari per l’interoperabilità tra Web Services  (la specifica dell’interfaccia, la rappresentazione del modello dei dati, i meccanismi di trasporto e scambio messaggi ecc.).
+Esistono attualmente diverse versioni del WS-I Basic Profile (v1.0 errata: 25 ottobre 2005, v1.1 final: 10 aprile 2006, v1.2 e v2.0 final: 9 novembre 2010), le più recenti delle quali sono riassunte nella tabella che segue.
+Per ciascuna versione del BP la tabella riassume le tecnologie citate, raggruppate per categoria, evidenziando le principali differenze e le novità rispetto alla versione precedente del profilo.</p>
+<div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="_images/versioniWSbasicprofile.png"><img alt="_images/versioniWSbasicprofile.png" src="_images/versioniWSbasicprofile.png" style="width: 1123.2px; height: 688.8px;" /></a>
+<p class="caption"><span class="caption-text">Figura 2.2: Versioni del WS-I Basic Profile a confronto</span></p>
+</div>
+<p><strong>Il punto di riferimento iniziale a supporto dell’interoperabilità dei Web Services SOAP in E015 Digital Ecosystem è il WS-I Basic Profile versione 1.1.</strong></p>
+<p>Inoltre, a corredo o a complemento delle diverse versioni del BP, la OASIS WS-I organization ha definito i seguenti profili:</p>
+<ul class="simple">
+<li>Simple SOAP Binding Profile (v1.0 final: 24 agosto 2004): indica requisiti specifici sulla serializzazione delle buste SOAP e la relativa rappresentazione nei messaggi di richiesta e risposta.</li>
+<li>Attachments Profile (v1.0 final: 20 aprile 2006): complementare al BP 1.1 relativamente all’uso di SOAP with Attachments.</li>
+<li>Basic Security Profile (v1.0 final errata: 5 luglio 2010, v1.1 final: 24 gennaio 2010): Fornisce requisiti specifici per rappresentare e veicolare le informazioni di sicurezza legate a un Web API. Le considerazioni relative alla sicurezza dei API SOAP sono riportate nella <a class="reference internal" href="#sezione2241"><span class="std std-ref">Sezione 2.2.4.1</span></a>.</li>
+</ul>
+<div class="section" id="considerazioni-sul-modello-dei-dati">
+<h5>Considerazioni sul modello dei dati<a class="headerlink" href="#considerazioni-sul-modello-dei-dati" title="Link a questa intestazione">¶</a></h5>
+<p>La selezione congiunta di un sottoinsieme di tecnologie standard è un elemento abilitante per l’interoperabilità applicativa; tuttavia è necessario indirizzare altri aspetti legati all’interoperabilità e relativi alle modalità di utilizzo degli standard tecnologici selezionati.
+Da questo punto di vista, il <strong>modello dei dati</strong> su cui si basano le interfacce delle API riveste un ruolo di particolare importanza. In generale, le specifiche dei Web API non entrano nel merito del modello dei dati di una API. Per garantire l’interoperabilità e la qualità delle API esposte in E015 Digital Ecosystem, in aggiunta alle specifiche tecniche, occorre introdurre opportune linee guida relative al modello dei dati e in generale all’interfaccia di una API.</p>
+<p><strong>Uso di XLM Schema</strong></p>
+<ul class="simple">
+<li>È opportuno fare riferimento a tipi standard della specifica XML Schema anziché creare tipi “custom” (esempi: ‘xs:date’, ‘xs:duration’, ‘xs:gYear’);</li>
+<li>Si sconsiglia di utilizzare tipi generici (es. ‘xs:string’) per rappresentare dati strutturati;</li>
+<li>In caso di campi alfanumerici aventi una formattazione specifica, è opportuno restringere l’uso del tipo ‘xs:string’ utilizzando opportuni pattern (esempi: ‘CAP’, ‘codice fiscale’, ‘codice Istat comune’);</li>
+<li>Valutare sempre l’uso di tipi già definiti nei Glossari condivisi dell’Ecosistema (esempi: ‘visitatore’, ‘point of interest’, ‘evento’).</li>
+</ul>
+<p><strong>WSDL(http://www.w3.org/TR/wsdl) e parametri di input e output</strong></p>
+<ul class="simple">
+<li>Si sconsiglia di utilizzare tipi “opachi” (per esempio in formato ‘base64binary’) nei parametri di input e output di una API: l’uso di tipi non opachi abilita controlli strutturali (validazione rispetto allo schema XML) che possono essere effettuati già a livello di interfaccia anziché essere rimandati a livello applicativo affidandoli alla logica interna di funzionamento del singolo API.</li>
+<li>Adottare sempre, quando possibile, il Document/Literal Style.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="tecnologie-per-le-api-rest">
+<span id="sezione2122"></span><h4>Tecnologie per le API REST<a class="headerlink" href="#tecnologie-per-le-api-rest" title="Link a questa intestazione">¶</a></h4>
+<p>Le API REST rappresentano una modalità alternativa per la pubblicazione e fruizione di API su protocollo HTTP rispetto a API di tipo SOAP. REST non impone particolari vincoli sulle tecnologie da adottare, per esempio relativamente alla descrizione dell’interfaccia o al modello dei dati. Tuttavia esistono alcune specifiche che possono essere utilizzate in ambito REST per coprire determinate dimensioni di interoperabilità (es. OpenAPI/Swagger per la descrizione dell’interfaccia di un API).</p>
+<p>Le API REST pubblicate in E015 Digital Ecosystem devono essere accompagnate da una adeguata documentazione, in particolare per quanto riguarda:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Il modello e il formato dei dati;</li>
+<li>Le operazioni fornite dalla API.</li>
+</ul>
+</div></blockquote>
+<p>Il presente requisito può essere soddisfatto allegando una descrizione dell’API formulata mediante uno dei linguaggi di descrizione di API REST quali, ad esempio, OpenAPI 3.0, OpenAPI 2.0 (anche noto come Swagger 2.0). Il linguaggio di descrizione OpenAPI è attualmente supportato dal consorzio Open API Initative (<a class="reference external" href="https://www.openapis.org/">https://www.openapis.org/</a>).
+In alternativa, per il modello dei dati delle API REST si richiede di utilizzare in particolare:</p>
+<ul class="simple">
+<li>XML Schema (<a class="reference external" href="http://www.w3.org/XML/Schema">http://www.w3.org/XML/Schema</a>) per i dati in formato XML;</li>
+<li>JSON Schema (<a class="reference external" href="http://json-schema.org/">http://json-schema.org/</a>) per i dati in formato JSON.</li>
+</ul>
+<p>Per la pubblicazione e il discovery di API REST si può fare riferimento agli standard Atom (<a class="reference external" href="http://www.ietf.org/rfc/rfc4287.txt">http://www.ietf.org/rfc/rfc4287.txt</a>). Per realizzare la sicurezza di canale è opportuno utilizzare sempre il protocollo HTTPS. Per ulteriori considerazioni relative alla sicurezza dei API REST si veda la <a class="reference internal" href="#sezione2242"><span class="std std-ref">Sezione 2.2.4.2</span></a>.</p>
+</div>
+<div class="section" id="tecnologie-per-le-api-publish-subscribe">
+<span id="sezione2123"></span><h4>Tecnologie per le API Publish/Subscribe<a class="headerlink" href="#tecnologie-per-le-api-publish-subscribe" title="Link a questa intestazione">¶</a></h4>
+<p>E015 Digital Ecosystem intende supportare scenari in cui da una parte vi sono soggetti, per esempio le API, che pubblicano notifiche (notify) e dall’altra vi sono altri soggetti, per esempio le applicazioni, che sono interessati a ricevere notifiche per erogare le proprie funzionalità (subscribe).</p>
+<div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="_images/approcciopublishsubscribe.png"><img alt="_images/approcciopublishsubscribe.png" src="_images/approcciopublishsubscribe.png" style="width: 861.6px; height: 513.6px;" /></a>
+<p class="caption"><span class="caption-text">Figura 2.3: Approccio al publish/subscribe nell” Ecosistema</span></p>
+</div>
+<p>Nell’ambito dell’Ecosistema è possibile adottare i seguenti due approcci (non mutuamente esclusivi) al Publish/Subscribe:</p>
+<ul class="simple">
+<li>Notification Dispatcher pubblicato dal singolo API Provider: in questo caso è il singolo provider dell’API a implementare internamente la logica di subscribe e notify necessaria a supportare il funzionamento della propria API (es. propagazione di informazioni ai soggetti interessati);</li>
+<li>Broker Publish/Subscribe esposto da un API Provider: in questo caso l’API di sottoscrizione e notifica è fornita come API trasversale erogata da un provider di E015 Digital Ecosystem e messa a disposizione di altri soggetti. Per esempio, può trattarsi di API di notifica dedicate destinate a domini verticali o specifiche categorie di eventi.</li>
+</ul>
+<p>La tecnologia di riferimento è WS-Notification (<a class="reference external" href="http://www.oasis-open.org/committees/wsn/">http://www.oasis-open.org/committees/wsn/</a>), attuale specifica di riferimento in ambito Web Service SOAP.
+Nel caso in cui si intendesse pubblicare all’interno dell’Ecosistema una API di tipo Publish/Subscribe è necessario assegnare all’attributo “Pattern di interazione” del descrittore dell’API il valore <strong>Publish&amp;Subscribe</strong>.
+Qualora invece si intendesse pubblicare una API sincrona di tipo request-response è necessario assegnare all’attributo “Pattern di interazione” del descrittore del API il valore <strong>Request-Response</strong>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="accesso-sicuro-alle-api">
+<span id="sezione22"></span><h2>Accesso sicuro alle API<a class="headerlink" href="#accesso-sicuro-alle-api" title="Link a questa intestazione">¶</a></h2>
+<div class="section" id="gli-aspetti-di-sicurezza-allinterno-del-descrittore-dellapi">
+<span id="sezione221"></span><h3>Gli aspetti di sicurezza all’interno del descrittore dell’API<a class="headerlink" href="#gli-aspetti-di-sicurezza-allinterno-del-descrittore-dellapi" title="Link a questa intestazione">¶</a></h3>
+<p>Si riportano nella tabella seguente i campi del descrittore che indirizzano direttamente gli aspetti legati all’accesso sicuro alle API.</p>
+<table border="1" class="docutils align-center" id="id8">
+<caption><span class="caption-text">Campi del descrittore relativi all’accesso sicuro alle API</span><a class="headerlink" href="#id8" title="Link a questa tabella">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campo</th>
+<th class="head">Descrizione</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Livello di accesso</td>
+<td><div class="first last line-block">
+<div class="line">Indicazione del livello di accesso previsto per</div>
+<div class="line">l’API. I valori ammissibili sono:</div>
+<div class="line-block">
+<div class="line">1. <strong>Community</strong>: per API accessibili da parte di</div>
+<div class="line-block">
+<div class="line">qualsiasi applicazione dell’Ecosistema;</div>
+</div>
+<div class="line">2. <strong>Restricted</strong>: per API con accesso limitato alle sole</div>
+<div class="line-block">
+<div class="line">applicazioni dell’Ecosistema</div>
+<div class="line">esplicitamente autorizzate.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="first last line-block">
+<div class="line">Attestazione</div>
+<div class="line-block">
+<div class="line">Client</div>
+</div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line">Riferimento al certificato d’accesso utilizzato</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last line-block">
+<div class="line">Aspetti di</div>
+<div class="line">sicurezza</div>
+<div class="line">specifici</div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line">Riferimento a uno o più file allegati al descrittore</div>
+<div class="line">che documentano eventuali aspetti di sicurezza specifici</div>
+<div class="line">che è necessario conoscere per utilizzare</div>
+<div class="line">correttamente l’API.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="lapproccio-dellecosistema-per-laccesso-sicuro-alle-api-da-parte-delle-applicazioni">
+<span id="sezione222"></span><h3>L’approccio dell’Ecosistema per l’accesso sicuro alle API da parte delle Applicazioni<a class="headerlink" href="#lapproccio-dellecosistema-per-laccesso-sicuro-alle-api-da-parte-delle-applicazioni" title="Link a questa intestazione">¶</a></h3>
+<p>Nell’ambito di E015 Digital Ecosystem l’API Provider, per ciascuna delle API erogate, deve esplicitare all’interno del descrittore se intende consentire l’accesso a tutte le applicazioni dell’Ecosistema (senza la necessità di una autorizzazione esplicita) oppure se intende restringere l’accesso alle sole applicazioni autorizzate.
+In particolare all’interno del descrittore, relativamente alla sezione “Accesso all’API”, sarà possibile selezionare una delle seguenti opzioni per l’attributo <em>“Livello di accesso”</em>:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><strong>Community</strong>: L’API è accessibile da parte di tutte le applicazioni dell’Ecosistema senza la necessità di una autorizzazione esplicita da parte dell’API Provider. L’Ecosistema invia all’API Provider una notifica ogni qualvolta una API di tipo community viene richiesta da parte di un App Provider. In questo modo E015 Digital Ecosystem consente all’API Provider di essere a conoscenza di quali siano gli utilizzatori della propria API.</li>
+<li><strong>Restricted</strong>: L’accesso è consentito alle sole applicazioni esplicitamente autorizzate da parte dell’ API Provider. In questo caso, l’Ecosistema inoltra agli API Provider le eventuali richieste di utilizzo ricevute da parte dei soggetti interessati e tiene traccia della risposta specificata da parte degli API Provider (di tipo “allow” / “deny”). In questo modo, E015 Digital Ecosystem è in grado di stabilire, ad un dato momento, quali applicazioni sono state esplicitamente autorizzate all’accesso. L’API Provider ha la possibilità in ogni momento di revocare l’accesso all’API da parte di una applicazione, ad esempio in seguito alla rilevazione di una violazione dei relativi termini di utilizzo <a class="footnote-reference" href="#f1" id="id1">[1]</a>.</li>
+</ol>
+</div></blockquote>
+<p>Il meccanismo attraverso il quale E015 Digital Ecosystem consente agli API Provider di gestire la restrizione dell’accesso alle proprie API a tutte le applicazioni dell’Ecosistema (nel caso di API di tipo <em>Community</em>)  o alle sole applicazioni dell’Ecosistema esplicitamente autorizzate (nel caso di API <em>Restricted</em>) prende il nome di <em>“Meccanismo di attestazione”</em>.</p>
+<p>Grazie al meccanismo di attestazione le API hanno la possibilità di determinare a quali applicazioni dell’Ecosistema appartengono le invocazioni ricevute.</p>
+<p>Da un punto di vista operativo, la gestione dell’accesso sicuro alle API impatta su due fasi specifiche del processo di pubblicazione di una API:</p>
+<ol class="arabic simple">
+<li><em>Descrizione dell’API</em>: In fase di compilazione del descrittore l’API Provider assegna all’attributo «Livello di accesso» il valore <em>Community</em> o <em>Restricted</em>.</li>
+<li><em>Richiesta di utilizzo delle API</em>: Quando un soggetto richiede di poter utilizzare una API per realizzare una applicazione, l’Ecosistema invia all’API Provider una notifica di richiesta di utilizzo.</li>
+</ol>
+<p>Si possono verificare due casi:</p>
+<ul class="simple">
+<li>Se il livello di accesso è «Community» E015 Digital Ecosystem considera da subito la richiesta come accettata (l’Ecosistema tiene traccia della relazione di utilizzo instaurata); l’API Provider - oltre a prender visione del soggetto e dell’applicazione utilizzatrice dell’API esposta - abilita il meccanismo di accesso all’API per la specifica applicazione richiedente entro 10 giorni lavorativi dalla data di richiesta;</li>
+<li>Se il livello è «Restricted», l’API Provider notifica all’Ecosistema l’accettazione o meno della richiesta e l’Ecosistema la propaga al soggetto richiedente; l’API Provider si impegna ad evadere le richieste di utilizzo delle proprie API entro 10 giorni lavorativi dalla data di richiesta; in caso di accettazione, l’Ecosistema tiene traccia della relazione di utilizzo instaurata e l’API Provider abilita il meccanismo di accesso all’API per la specifica applicazione richiedente, entro 10 giorni lavorativi dalla data di richiesta.</li>
+</ul>
+<p>In entrambi i casi, l’API Provider dovrà procedere alle attività tecniche di configurazione necessarie per consentire a run-time l’accesso all’API a tutti i soggetti autorizzati.</p>
+</div>
+<div class="section" id="linee-guida-tecnologiche-per-la-gestione-dellaccesso-alle-api-meccanismo-di-attestazione">
+<span id="sezione223"></span><h3>Linee guida tecnologiche per la gestione dell’accesso alle API (meccanismo di attestazione)<a class="headerlink" href="#linee-guida-tecnologiche-per-la-gestione-dellaccesso-alle-api-meccanismo-di-attestazione" title="Link a questa intestazione">¶</a></h3>
+<p>Il meccanismo di attestazione si basa sia sull’utilizzo di token (es. token generati nell’ambito dell’adozione dello standard OAuth2.0, SAML, API Key, Basic Authentication, …) sia sull’uso di certificati X.509 (<a class="reference external" href="http://www.itu.int/rec/T-REC-X.509/en">http://www.itu.int/rec/T-REC-X.509/en</a>), resi disponibili attraverso i registri ufficiali dell’Ecosistema.</p>
+<p>Di seguito vengono riportati i passi che l’API Provider deve eseguire al fine di adottare il meccanismo di attestazione tramite <em>certificati X.509</em>:</p>
+<ul>
+<li><p class="first"><em>Fase di descrizione e pubblicazione dell’API</em>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>L’API Provider crea una coppia di chiavi: una privata e una pubblica inserita in un certificato X.509, ottenendola da una authority esterna o auto generandola. L’API Provider referenzia la chiave pubblica (certificato X.509) nel descrittore della propria API (attributo “Certificato X.509”);</li>
+<li>L’API Provider configura il proprio application server su cui viene eseguita l’API (ed eventualmente – se necessario – i propri apparati di rete) per l’utilizzo della chiave privata inserendola nel relativo keystore in modo da realizzare un endpoint HTTPS sul quale ricevere le richieste di utilizzo; lo stesso endpoint deve essere configurato per richiedere al client di presentare il proprio certificato.</li>
+</ul>
+</div></blockquote>
+</li>
+<li><dl class="first docutils">
+<dt><em>Fase di gestione delle richieste di utilizzo</em>:</dt>
+<dd><ul class="first">
+<li><p class="first">Una volta ricevuta tramite l’Ecosistema, e approvata, nel caso di API «Restricted», una richiesta di utilizzo da parte di un soggetto fruitore, l’API Provider ottiene il certificato dell’applicazione. Tale certificato è inviato all’API Provider da parte dell’Ecosistema contestualmente alla richiesta di utilizzo dell’API.</p>
+</li>
+<li><p class="first">L’API Provider inserisce il certificato del soggetto fruitore nel trust-store dell’application server su cui viene eseguita l’API. La modalità con cui svolgere questa attività dipende dai componenti sistemistici specifici utilizzati dal singolo API Provider. In generale comunque, dal momento che ad ogni applicazione è associata una certificate chain, si potrà alternativamente:</p>
+<blockquote>
+<div><ul class="simple">
+<li>inserire nel truststore il certificato foglia della certificate chain;</li>
+<li>inserire nel truststore il certificato CA della certificate chain, configurando i propri appliance con regole specifiche per abilitare soltanto lo specifico certificato foglia (ad esempio, effettuando un controllo sul campo CN del certificato foglia associato a tale CA).</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p class="last">Queste due alternative sono del tutto equivalenti dal punto di vista concettuale di gestione del meccanismo di attestazione; l’API Provider può decidere autonomamente quale perseguire in base alle specificità dei propri componenti hardware per la gestione delle connessioni SSL.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><em>Fase di erogazione del API a runtime</em></dt>
+<dd><ul class="first last simple">
+<li>Una volta ricevuta una richiesta applicativa da parte di una App, l’application server dell” API verifica in automatico che il certificato presentato sia tra quelli presenti nel proprio truststore / sia firmato da parte di una delle CA presenti nel proprio truststore.</li>
+<li>Se la verifica va a buon fine, l’application server instaura con il fruitore un canale di comunicazione sicuro (SSL/TLS con Client Authentication) e rende disponibile al livello applicativo il certificato del fruitore per consentire l’attuazione delle eventuali politiche di autorizzazione.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>I certificati delle API, al fine di essere compatibili con E015 Digital Ecosystem, devono possedere una struttura conforme ai requisiti che seguono:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Durata: maggiore o uguale a 2 anni;</li>
+<li>Basic Constraint: End Entity (quindi non-CA);</li>
+<li>Key Usage (critical): Digital Signature e Key Encipherment;</li>
+<li>Enhanced Key Usage: Server Authentication, Client Authentication;</li>
+<li>Signature Algorithm: almeno <em>sha256RSA</em> per massimizzare la compatibilità con il software esistente.</li>
+</ul>
+</div></blockquote>
+<p>È consentito l’utilizzo di certificati multi-dominio  nel caso si debba utilizzare un singolo certificato per  domini/API diversi (che rimangono comunque univocamente identificati da certificato e domain name). Questi certificati, denominati certificati ‘SAN’, riportano nel campo Subject Alternative Names l’elenco dei nomi di dominio per i quali il certificato deve essere considerato valido. Questo elenco viene definito al momento della creazione del certificato X509 indicando l’utilizzo dell’estensione ‘Subject Alternative Name’ e specificato come contenuto del campo Subject Alternative Name la lista di stringhe con l’elenco dei domini da considerare, nel seguente formato:  <em>‘DNS:&lt;domainName1&gt;, DNS:&lt;domainName2&gt;’</em>  (per maggiori dettagli si veda <a class="reference external" href="http://tools.ietf.org/html/rfc2818">http://tools.ietf.org/html/rfc2818</a>).</p>
+<p>Il Technical Management Board presiede i processi per la gestione del meccanismo di attestazione:</p>
+<ul class="simple">
+<li>validando i certificati delle API all’atto della sottomissione del descrittore per approvazione;</li>
+<li>monitorando periodicamente la validità dei certificati pubblicati nei registri dell’Ecosistema e notificando agli API Provider la necessità di procedere al rinnovo in prossimità delle date di scadenza.</li>
+</ul>
+<p>Si precisa che il ruolo di E015 Digital Ecosystem nella gestione del meccanismo di attestazione non è quello di emettere dei certificati, bensì quello di gestire l’albo ufficiale dei certificati delle API. Ciascun soggetto è libero infatti di decidere se acquisire i certificati X.509 da una authority esterna oppure se auto generarli <a class="footnote-reference" href="#f2" id="id2">[2]</a>.</p>
+</div>
+<div class="section" id="linee-guida-tecnologiche-per-la-gestione-degli-aspetti-di-sicurezza-delle-api">
+<span id="sezione224"></span><h3>Linee guida tecnologiche per la gestione degli aspetti di sicurezza delle API<a class="headerlink" href="#linee-guida-tecnologiche-per-la-gestione-degli-aspetti-di-sicurezza-delle-api" title="Link a questa intestazione">¶</a></h3>
+<p>Gestire la sicurezza nelle interazioni applicative tra API ed applicazioni di E015 Digital Ecosystem significa:</p>
+<ul class="simple">
+<li>fornire agli API provider opportuni strumenti per garantire proprietà dell’interazione quali: integrità e confidenzialità dei dati, prova della fonte, non ripudio ecc.;</li>
+<li>dare la possibilità agli API Provider di specificare i requisiti di sicurezza per l’accesso alle API erogate nell’Ecosistema.</li>
+</ul>
+<p>I principali aspetti da considerare sono:</p>
+<ul class="simple">
+<li>gli strumenti per realizzare la sicurezza nelle interazioni applicative tra API;</li>
+<li>gli strumenti per permettere agli API Provider di specificare i requisiti di sicurezza delle proprie API.</li>
+</ul>
+<div class="section" id="sicurezza-e-api-soap">
+<span id="sezione2241"></span><h4>Sicurezza e API SOAP<a class="headerlink" href="#sicurezza-e-api-soap" title="Link a questa intestazione">¶</a></h4>
+<p>Per quanto riguarda la realizzazione di API sicure, nel contesto dell’Ecosistema si fa riferimento in generale allo stack tecnologico dei Web API e al <strong>WS-I Basic Security Profile 1.1</strong>.</p>
+<p><strong>FIGURA 2.4 WS STACK E TECNOLOGIE DI SICUREZZA</strong></p>
+<p>In particolare, il WS-I Basic Security Profile 1.1 definito dalla OASIS WS-I Organization (<a class="reference external" href="http://www.oasis-ws-i.org/">http://www.oasis-ws-i.org/</a>) indica le specifiche tecnologie da utilizzare con riferimento alle dimensioni di interoperabilità relative alla sicurezza e al trasporto in ambito Web Service SOAP.</p>
+<div class="figure align-center" id="id9">
+<a class="reference internal image-reference" href="_images/WSbasicsecurityprofile.png"><img alt="_images/WSbasicsecurityprofile.png" src="_images/WSbasicsecurityprofile.png" style="width: 566.4px; height: 654.4px;" /></a>
+<p class="caption"><span class="caption-text">Figura 2.5: WS-I Basic Security Profile 1.1 e tecnologie considerate</span></p>
+</div>
+<p>Lo standard OASIS WS-Security: SOAP Message Security (<a class="reference external" href="http://docs.oasis-open.org/wss/v1.1/">http://docs.oasis-open.org/wss/v1.1/</a>) definisce diverse estensioni al protocollo SOAP al fine di garantire la protezione end-to-end dei messaggi scambiati nelle interazioni tra Web API SOAP. In particolare, i tre principali meccanismi forniti dallo standard  sono:</p>
+<ul class="simple">
+<li>la possibilità di veicolare <strong>token di sicurezza</strong> come parte di un messaggio SOAP;</li>
+<li>la tutela dell’<strong>integrità</strong> del messaggio SOAP;</li>
+<li>la tutela della <strong>confidenzialità</strong> del messaggio SOAP.</li>
+</ul>
+<p>Alla base di WS-Security c’è il concetto di <em>security token</em>: costrutti che possono essere usati all’interno dei messaggi SOAP (in particolare nell’header) per rappresentare e veicolare informazioni (per esempio di identità, oppure relative ai meccanismi di processing da eseguire per validare i token stessi). Lo standard WS-Security permette di usare diversi tipi di token: binari, basati su XML (tra cui rientrano le asserzioni SAML), criptati e altri ancora. Per la protezione di integrità e confidenzialità, WS-Security utilizza standard come XML-Signature e XML-Encription, applicandoli a determinate parti del messaggio SOAP.</p>
+<p>In aggiunta al WS-I Basic Security Profile 1.1, per permettere agli API Provider di specificare i requisiti di sicurezza delle proprie API si considerano i seguenti standard:</p>
+<ul class="simple">
+<li><strong>WS-Policy</strong> (<a class="reference external" href="http://www.w3.org/TR/ws-policy/">http://www.w3.org/TR/ws-policy/</a>) definisce un framework e un modello per rappresentare le policy di sicurezza di una API mediante descrizioni machine-readable: una policy può ad esempio descrivere i requisiti di sicurezza (autenticazione, autorizzazione ecc.) che il richiedente deve soddisfare per poter accedere a un API, oppure la messa in atto da parte dell’API Provider di determinati meccanismi come il tracciamento dei messaggi applicativi. Per esempio, tramite una policy WS-Policy un Web API può comunicare di essere in grado di accettare asserzioni SAML 2.0. WS-Policy non entra nel merito della rappresentazione delle caratteristiche di una API: a tal fine possono essere usate altre specifiche, per esempio WS-SecurityPolicy.</li>
+<li><strong>WS-SecurityPolicy</strong> (<a class="reference external" href="http://www.oasis-open.org/standards#ws-secpol">http://www.oasis-open.org/standards#ws-secpol</a>) definisce le modalità di rappresentazione delle specifiche capacità o degli specifici requisiti di sicurezza di una API. Per esempio, grazie a WS-SecurityPolicy, è possibile scrivere una policy assertion per richiedere la presenza di un determinato elemento nell’header del messaggio SOAP.</li>
+</ul>
+<p>I requisiti di sicurezza di un API così descritti possono diventare parte integrante del descrittore del API.</p>
+</div>
+<div class="section" id="sicurezza-e-api-rest">
+<span id="sezione2242"></span><h4>Sicurezza e API REST<a class="headerlink" href="#sicurezza-e-api-rest" title="Link a questa intestazione">¶</a></h4>
+<p>Per le API REST in generale non esistono standard specifici per la gestione della sicurezza. Nell’ambito di E015 Digital Ecosystem è raccomandato l’utilizzo delle strategie e meccanismi di sicurezza comunemente utilizzate per l’accesso a web application (sicurezza di canale con SSL/TLS ecc.). Il Technical Management Board si riserva di accettare meccanismi di autenticazione differenti, purché adeguatamente documentate.</p>
+</div>
+</div>
+</div>
+<div class="section" id="glossari-delle-api">
+<span id="sezione23"></span><h2>Glossari delle API<a class="headerlink" href="#glossari-delle-api" title="Link a questa intestazione">¶</a></h2>
+<div class="section" id="gli-aspetti-relativi-ai-glossari-allinterno-del-descrittore-delle-api">
+<span id="sezione231"></span><h3>Gli aspetti relativi ai glossari all’interno del descrittore delle API<a class="headerlink" href="#gli-aspetti-relativi-ai-glossari-allinterno-del-descrittore-delle-api" title="Link a questa intestazione">¶</a></h3>
+<p>Si riportano nella tabella seguente i campi del descrittore delle API che indirizzano direttamente gli aspetti legati all’interoperabilità delle API.</p>
+<table border="1" class="docutils align-center">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campo</th>
+<th class="head">Descrizione</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><div class="first last line-block">
+<div class="line">Usi di glossari</div>
+<div class="line">condivisi</div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line">Riferimento ad eventuali glossari condivisi</div>
+<div class="line">dell’Ecosistema utilizzati da parte delle API</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="linee-guida-per-la-gestione-dei-glossari-allinterno-dellecosistema">
+<span id="sezione232"></span><h3>Linee Guida per la gestione dei glossari all’interno dell’Ecosistema<a class="headerlink" href="#linee-guida-per-la-gestione-dei-glossari-allinterno-dellecosistema" title="Link a questa intestazione">¶</a></h3>
+<p>Un primo importante aspetto che indirizza la gestione dei Glossari all’interno dell’Ecosistema riguarda il modello dei dati di una API.
+Il <strong>modello dei dati</strong> di una API identifica e descrive:</p>
+<ul class="simple">
+<li>le entità e i concetti utilizzati nell’interazione con entità esterne per l’erogazione di funzionalità;</li>
+<li>la rappresentazione di tali entità e concetti (per esempio le modalità di  serializzazione in costrutti XML da utilizzare nei messaggi di richiesta e risposta).</li>
+</ul>
+<p>Pertanto è opportuno che il modello dei dati delle API dell’Ecosistema sia adeguatamente documentato, formalizzato e strutturato:</p>
+<ul class="simple">
+<li>la <strong>documentazione</strong> può consistere in una descrizione testuale (eventualmente guidata da un template comune);</li>
+<li>la <strong>formalizzazione</strong> può consistere in una rappresentazione dei concetti mediante opportuni linguaggi di descrizione (diagrammi UML <a class="reference external" href="http://www.uml.org/">http://www.uml.org/</a> , E-R ecc.);</li>
+<li>la <strong>strutturazione</strong> è la rappresentazione basata su una specifica tecnologia (per esempio un linguaggio di markup come XML) utilizzata dalla specifica API o applicazione.</li>
+</ul>
+<p>Se adeguatamente descritti, formalizzati, strutturati e condivisi, i modelli dei dati abilitano il riuso nell’ambito di E015 Digital Ecosystem; diverse API e applicazioni infatti spesso utilizzano nel proprio modello dei dati gli stessi concetti, dunque:</p>
+<ul class="simple">
+<li>potrebbe essere già disponibile una rappresentazione degli stessi concetti;</li>
+<li>rappresentazioni di nuovi concetti potrebbero essere condivise con altri provider dell’Ecosistema.</li>
+</ul>
+<div class="figure align-center" id="id10">
+<a class="reference internal image-reference" href="_images/modellodati.png"><img alt="_images/modellodati.png" src="_images/modellodati.png" style="width: 1143.2px; height: 692.0px;" /></a>
+<p class="caption"><span class="caption-text">Figura 2.6: Modello dei dati: documentazione, formalizzazione, rappresentazione e utilizzo</span></p>
+</div>
+<p>L’approccio indicato per E015 Digital Ecosystem propone e incentiva l’adozione di <strong>glossari condivisi</strong> per favorire l’interoperabilità e il riuso nella realizzazione di API e delle applicazioni da parte dei soggetti aderenti all’ecosistema, difatti:</p>
+<ul class="simple">
+<li>I glossari condivisi permettono sia di classificare le API che di adottare modelli dei dati comuni;</li>
+<li>I glossari condivisi possono rappresentare un patrimonio informativo utilizzabile;</li>
+<li>È di interesse il potenziale ruolo degli operatori di dominio e/o delle associazioni di categoria per la definizione e l’evoluzione dei glossari;</li>
+<li>È importante promuovere l’inclusione nell’ecosistema di glossari e standard già esistenti in alcuni settori.</li>
+</ul>
+<p>Condivisione e riuso di un modello dei dati possono avvenire a diversi “livelli” di specializzazione: i glossari infatti possono coprire concetti generali (tempo, geo-localizzazione ecc, concetti di specifici domini applicativi (turismo, trasporti, enogastronomia, alberghiero ecc.), concetti specifici di una singola applicazione o di una singola API.</p>
+<div class="figure align-center" id="id11">
+<a class="reference internal image-reference" href="_images/glossario.png"><img alt="_images/glossario.png" src="_images/glossario.png" style="width: 856.0px; height: 362.4px;" /></a>
+<p class="caption"><span class="caption-text">Figura 2.7: Possibili livelli di specializzazione di un glossario</span></p>
+</div>
+<p>Inoltre, i glossari condivisi possono essere più o meno formalizzati: da semplici tag, keyword o vocabolari si può arrivare a tassonomie complete o ad una vera e propria formalizzazione in ontologie.
+In fase di sottomissione di una nuova API da pubblicare all’interno dell’Ecosistema il TMB verificherà l’eventuale presenza di glossari già disponibili e di potenziale interesse per il API Provider, rispetto ai quali rendere coerente l’interfaccia ad il modello dei dati dell’ API stessa.</p>
+</div>
+</div>
+<div class="section" id="aspetti-relativi-al-monitoraggio-delle-api">
+<span id="sezione24"></span><h2>Aspetti relativi al monitoraggio delle API<a class="headerlink" href="#aspetti-relativi-al-monitoraggio-delle-api" title="Link a questa intestazione">¶</a></h2>
+<div class="section" id="gli-aspetti-relativi-al-monitoraggio-allinterno-del-descrittore-delle-api">
+<span id="sezione241"></span><h3>Gli aspetti relativi al monitoraggio all’interno del descrittore delle API<a class="headerlink" href="#gli-aspetti-relativi-al-monitoraggio-allinterno-del-descrittore-delle-api" title="Link a questa intestazione">¶</a></h3>
+<p>Si riportano nella tabella seguente i campi del descrittore delle API che indirizzano direttamente gli aspetti legati all’interoperabilità delle API.</p>
+<table border="1" class="docutils align-center" id="id12">
+<caption><span class="caption-text">Campi del descrittore relativi al monitoraggio</span><a class="headerlink" href="#id12" title="Link a questa tabella">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campo</th>
+<th class="head">Descrizione</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Endpoint di monitoraggio</td>
+<td>Endpoint per il controllo di disponibilità dell’API</td>
+</tr>
+<tr class="row-odd"><td><div class="first last line-block">
+<div class="line">Invocazioni di test</div>
+<div class="line">per monitoraggio</div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line">Formulazione delle invocazioni di test da utilizzare</div>
+<div class="line">per la verifica di disponibilità dell’API e per la</div>
+<div class="line">verifica della correttezza delle risposte ottenute.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last line-block">
+<div class="line">Frequenza di</div>
+<div class="line">monitoraggio</div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line">Indicazione da parte dell’API Provider di una frequenza</div>
+<div class="line">di monitoraggio compatibile col tipo di API erogata</div>
+<div class="line">per quello specifico dominio.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="first last line-block">
+<div class="line">Segnalazioni</div>
+<div class="line">specifiche</div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line"><strong>Opzionale</strong>: es. down quotidiani programmati per</div>
+<div class="line">attività di manutenzione</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="lapproccio-dellecosistema-per-il-monitoraggio-delle-api">
+<span id="sezione242"></span><h3>L’approccio dell’Ecosistema per il monitoraggio delle API<a class="headerlink" href="#lapproccio-dellecosistema-per-il-monitoraggio-delle-api" title="Link a questa intestazione">¶</a></h3>
+<p>In generale è di interesse per l’Ecosistema poter verificare su base continuativa se le API sono attive e come/quanto queste vengono usate da parte delle applicazioni.
+Per questo motivo, l’Ecosistema prevede dei meccanismi di base per il monitoraggio continuativo delle API pubblicate; in particolare, a partire dalla  versione 1 verrà effettuato un <strong>controllo di disponibilità</strong> delle API.
+Al fine di consentire a E015 Digital Ecosystem di poter effettuare tale controllo, l’API Provider è tenuto a specificare all’interno del descrittore dell’API un endpoint di monitoraggio e ad esprimere una frequenza di monitoraggio compatibile con il tipo di API erogata.
+Inoltre l’API Provider deve fornire all’interno del descrittore anche delle invocazioni “campione” di test (request e response), le quali saranno utilizzate dall’Ecosistema per la verifica di disponibilità dell’API e per la verifica della correttezza delle risposte ottenute.
+L’Ecosistema utilizza l’endpoint di monitoraggio specificato nel descrittore per controllare periodicamente l’effettiva disponibilità dell’API (attraverso un semplice meccanismo di “ping”) e per effettuare delle invocazioni di test sulla base delle invocazioni “campione” specificate dall’API provider all’interno del descrittore.</p>
+<p>Da un punto di vista operativo, la gestione degli aspetti di monitoraggio delle API erogate impatta su due fasi specifiche del processo di pubblicazione e di erogazione delle API:</p>
+<ol class="arabic simple">
+<li><em>Descrizione dell’API</em>: In fase di compilazione del descrittore dell’API, l’API Provider compila gli attributi: <em>“Endpoint di monitoraggio”</em>, <em>“Invocazioni di test per monitoraggio”</em> e <em>“Frequenza di monitoraggio”</em> (utilizzati dall’Ecosistema per effettuare il controllo di disponibilità e di correttezza delle risposte delle API), <em>“Messaggi di indisponibilità”</em> (opzionale), <em>“Test suite”</em> (opzionale) , <em>“Endpoint ambiente di test”</em> (opzionale) e <em>“Segnalazioni specifiche”</em> (opzionale).</li>
+<li><em>Erogazione dell’API</em>: A run-time E015 Digital Ecosystem effettua periodicamente il controllo di disponibilità delle API e verifica la correttezza delle risposte ricevute in seguito alle invocazioni campione specificate nel descrittore. Il monitoraggio è effettuato “ai morsetti esterni” del API, poiché indica il livello di disponibilità con cui è percepito l’API dall’Ecosistema.</li>
+</ol>
+<p>Il TMB utilizza i dati di monitoraggio per comprendere il livello di qualità dell’API erogata (in termini di disponibilità) e in seguito restituire tale informazione all’API Provider, nonché diffondere l’andamento del monitoraggio alle applicazioni che utilizzano l’API esposta.</p>
+</div>
+</div>
+<div class="section" id="aspetti-correlati-allerogazione-di-una-api">
+<span id="sezione25"></span><h2>Aspetti correlati all’erogazione di una API<a class="headerlink" href="#aspetti-correlati-allerogazione-di-una-api" title="Link a questa intestazione">¶</a></h2>
+<div class="section" id="gli-aspetti-relativi-allerogazione-allinterno-del-descrittore-dell-api">
+<span id="sezione251"></span><h3>Gli aspetti relativi all’erogazione all’interno del descrittore dell’ API<a class="headerlink" href="#gli-aspetti-relativi-allerogazione-allinterno-del-descrittore-dell-api" title="Link a questa intestazione">¶</a></h3>
+<p>Si riportano nella tabella seguente i campi del descrittore dell’API che indirizzano direttamente gli aspetti legati all’erogazione dell’API.</p>
+<table border="1" class="docutils align-center" id="id13">
+<caption><span class="caption-text">Campi del descrittore relativi all’erogazione dell’API</span><a class="headerlink" href="#id13" title="Link a questa tabella">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campo</th>
+<th class="head">Descrizione</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><div class="first last line-block">
+<div class="line">Impegni/capacità</div>
+<div class="line">di erogazione</div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line">Indicazione generale su base volontaria della</div>
+<div class="line">capacità di erogazione dell’API che  l’API Provider</div>
+<div class="line">indica di poter sostenere nei confronti dell’Ecosistema</div>
+<div class="line">(secondo una logica best effort).</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="first last line-block">
+<div class="line">Logiche di</div>
+<div class="line">remunerazione</div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line">Indicazione della logica di remunerazione connessa all</div>
+<div class="line">erogazione dell’API. I valori ammissibili per questo</div>
+<div class="line">attributo del descrittore sono:</div>
+<div class="line-block">
+<div class="line">1. Free: per API che non prevedono alcuna forma</div>
+<div class="line-block">
+<div class="line">di tariffazione;</div>
+</div>
+<div class="line">2. A pagamento: per API che prevedono il pagamento</div>
+<div class="line-block">
+<div class="line">di una tariffa legata all’utilizzo.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line"><strong>Modelli di tariffazione supportati</strong> (attributo specifico</div>
+<div class="line">da compilare per le sole API “a pagamento”):</div>
+<div class="line">Indicazione dei modelli supportati per la tariffazione di</div>
+<div class="line">API a pagamento.</div>
+<div class="line"><strong>Tipologia di QoS supportate</strong> (attributo specifico da</div>
+<div class="line">compilare per le sole API “a pagamento”):</div>
+<div class="line">Indicazione delle tipologie di API level sulle quali</div>
+<div class="line">l’API Provider si rende disponibile a stipulare accordi</div>
+<div class="line">puntuali con specifici utilizzatori delle API.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last line-block">
+<div class="line">Dimensionamento dei</div>
+<div class="line">flussi informativi</div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line">Informazioni circa le dimensioni dei flussi informativi</div>
+<div class="line">in ingresso e in uscita dall” API.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="impegni-capacita-di-erogazione">
+<span id="sezione252"></span><h3>Impegni / capacità di erogazione<a class="headerlink" href="#impegni-capacita-di-erogazione" title="Link a questa intestazione">¶</a></h3>
+<p>E015 Digital Ecosystem prevede che normalmente le API siano erogate secondo una logica di tipo <strong>Best effort</strong>; è interesse degli API Provider erogare verso l’Ecosistema API di qualità al fine di incentivare un ampio utilizzo delle stesse da parte delle applicazioni.
+All’interno del descrittore il campo <em>“Impegni / capacità di erogazione”</em> offre all’API Provider la possibilità di comunicare all’Ecosistema, su base volontaria, le disponibilità e gli impegni di massima che esso si rende disponibile a sostenere per l’erogazione della propria API; ad esempio, l’API Provider può dichiarare all’interno del descrittore – relativamente al campo <em>“Impegni / capacità di erogazione”</em> –  il numero massimo di invocazioni giornaliere per Applicazione supportate dalla propria API. Tali informazioni rappresentano una utile indicazione verso il TMB per favorire l’ottimizzazione dell’utilizzo dell’API da parte delle applicazioni - sempre e comunque in una logica complessiva di tipo best effort <a class="footnote-reference" href="#f3" id="id3">[3]</a> - e per promuovere il miglioramento progressivo nel tempo della qualità delle funzionalità esposte.</p>
+</div>
+<div class="section" id="logiche-di-remunerazione">
+<span id="sezione253"></span><h3>Logiche di remunerazione<a class="headerlink" href="#logiche-di-remunerazione" title="Link a questa intestazione">¶</a></h3>
+<p>Ciascun soggetto dell’Ecosistema ha la possibilità di perseguire proprie logiche di remunerazione legate all’erogazione delle API. È pertanto possibile che gli API Provider decidano di erogare le proprie API solo a soggetti con i quali è stato definito un accordo di tipo commerciale.</p>
+<p>Al fine di dare evidenza di questa possibilità, gli API Provider devono specificare all’interno del descrittore se le proprie API sono disponibili a pagamento (attributo “Logiche di remunerazione”). In questo modo, E015 Digital Ecosystem facilita la stipulazione di accordi commerciali tra le diverse parti.
+All’interno del descrittore, relativamente all’attributo “Logiche di remunerazione”, sarà possibile selezionare pertanto una delle seguenti opzioni:</p>
+<ol class="arabic simple">
+<li><strong>Free</strong>: non è prevista alcuna forma di tariffazione; l’API è erogata gratuitamente ai soggetti autorizzati ad accedervi;</li>
+<li><strong>A pagamento</strong>: l’accesso all’API è soggetto a tariffazione.</li>
+</ol>
+<p>Nel caso di API <em>“a pagamento”</em>, l’API Provider è tenuto a compilare anche i campi del descrittore <em>“Modelli di tariffazione supportati”</em>, <em>“Tipologie di QoS supportate”</em> e <em>“Referente commerciale”</em> al fine di indicare gli aspetti di interesse sulla base dei quali la tariffa di erogazione dell’API sarà concordata.</p>
+<p>Si precisa che nel caso di API <em>“a pagamento”</em> la negoziazione della tariffa tra API Provider e i soggetti utilizzatori avviene al di fuori dell’Ecosistema.
+Qualora l’API Provider desiderasse esporre all’interno dell’Ecosistema due versioni della medesima API, una <em>“free”</em> ed una <em>“a pagamento”</em> - per l’utilizzo della quale è necessario stipulare un accordo di tipo commerciale - è necessario procedere alla pubblicazione di due API distinte, ciascuna delle quali corredata da un proprio descrittore specifico.</p>
+<div class="section" id="modelli-di-tariffazione-supportati-api-a-pagamento">
+<span id="sezione2531"></span><h4>Modelli di tariffazione supportati (API “a pagamento”)<a class="headerlink" href="#modelli-di-tariffazione-supportati-api-a-pagamento" title="Link a questa intestazione">¶</a></h4>
+<p>Nel caso di API <em>“a pagamento”</em> l’API Provider deve specificare all’interno del descrittore, nel campo <em>“Modelli di tariffazione supportati”</em>, quali sono le modalità previste per il riconoscimento di un corrispettivo economico derivante dall’utilizzo dell’API da parte delle applicazioni.
+Esempi di modelli di tariffazione che possono essere specificati all’interno di questo campo sono: pagamento una tantum, pagamento di un abbonamento, pagamento a consumo, pagamento in base alla QoS garantita ecc.</p>
+</div>
+<div class="section" id="tipologie-di-qos-supportate-api-a-pagamento">
+<span id="sezione2532"></span><h4>Tipologie di QoS supportate (API “a pagamento”)<a class="headerlink" href="#tipologie-di-qos-supportate-api-a-pagamento" title="Link a questa intestazione">¶</a></h4>
+<p>Nel caso di API <em>“a pagamento”</em> per i quali sia previsto un modello di tariffazione basato su garanzie di qualità (QoS), è necessario che  l’API Provider compili il campo del descrittore <em>“Tipologie di QoS supportate”</em>.</p>
+<p>All’interno di questo campo l’API Provider dichiara le tipologie di API level sulla base delle quali esso è disponibile a definire la tariffa di erogazione dell’API (stipulando in questo modo accordi di tipo commerciale). Esempi di possibili tipologie di API level sono: disponibilità dell’API, response time, volume di traffico per tipologia di transazioni campione, soglie di traffico, fasce orarie di erogazione ecc.</p>
+</div>
+</div>
+<div class="section" id="dimensionamento-dei-flussi-informativi">
+<span id="sezione254"></span><h3>Dimensionamento dei flussi informativi<a class="headerlink" href="#dimensionamento-dei-flussi-informativi" title="Link a questa intestazione">¶</a></h3>
+<p>Al fine di consentire ai soggetti utilizzatori di ottimizzare l’utilizzo delle API dell’Ecosistema, è data facoltà agli API Provider di fornire, nel campo “Dimensionamento dei flussi informativi”, alcune indicazioni circa le dimensioni (ad esempio, in kb) dei flussi informativi in ingresso e in uscita dall’API in corrispondenza di invocazioni campione rappresentative di un normale utilizzo.</p>
+</div>
+</div>
+<div class="section" id="aspetti-legati-allazienda-erogatrice-delle-api">
+<span id="sezione26"></span><h2>Aspetti legati all’azienda erogatrice delle API<a class="headerlink" href="#aspetti-legati-allazienda-erogatrice-delle-api" title="Link a questa intestazione">¶</a></h2>
+<p>Si riportano nella tabella seguente i campi del descrittore dell’API che indirizzano direttamente gli aspetti legati all’azienda erogatrice dell’API.</p>
+<div class="section" id="gli-aspetti-relativi-allazienda-allinterno-del-descrittore-dell-api">
+<span id="sezione261"></span><h3>Gli aspetti relativi all’azienda all’interno del descrittore dell’ API<a class="headerlink" href="#gli-aspetti-relativi-allazienda-allinterno-del-descrittore-dell-api" title="Link a questa intestazione">¶</a></h3>
+<table border="1" class="docutils align-center" id="id14">
+<caption><span class="caption-text">Campi del descrittore relativi all’azienda erogatrice dell’API</span><a class="headerlink" href="#id14" title="Link a questa tabella">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campo</th>
+<th class="head">Descrizione</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Anagrafica dell’API</td>
+<td><div class="first last line-block">
+<div class="line">Attributi di descrizione anagrafica dell’API:</div>
+<div class="line-block">
+<div class="line">1. Nome dell’ API: nome univoco dell’API</div>
+<div class="line-block">
+<div class="line">all’interno dell’Ecosistema.</div>
+</div>
+<div class="line">2. Descrizione dell’API: descrizione</div>
+<div class="line-block">
+<div class="line">sintetica in testo libero dell’API,</div>
+<div class="line">la quale fornisce una presentazione</div>
+<div class="line">funzionale dell’API.</div>
+</div>
+<div class="line">3. Versione del descrittore: indicazione</div>
+<div class="line-block">
+<div class="line">della versione del descrittore.</div>
+</div>
+<div class="line">4. Tag per classificazione dell’API:</div>
+<div class="line-block">
+<div class="line">insieme di parole chiave che consentono</div>
+<div class="line">di classificare l’API.</div>
+</div>
+<div class="line">5. Eventuali ulteriori vincoli specifici:</div>
+<div class="line-block">
+<div class="line">eventuali ulteriori vincoli che è</div>
+<div class="line">necessario conoscere / rispettare per</div>
+<div class="line">utilizzare l’API.</div>
+</div>
+<div class="line">6. Estensione geografica contenuti dell’API:</div>
+<div class="line-block">
+<div class="line">indicazione dell’estensione geografica</div>
+<div class="line">dei dati restituiti dalla API</div>
+<div class="line">(utile a favorirne la ricerca)</div>
+</div>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="linee-guida-per-la-gestione-degli-aspetti-relativi-allazienda">
+<span id="sezione262"></span><h3>Linee Guida per la gestione degli aspetti relativi all’azienda<a class="headerlink" href="#linee-guida-per-la-gestione-degli-aspetti-relativi-allazienda" title="Link a questa intestazione">¶</a></h3>
+<p>Il descrittore dell’API rappresenta uno strumento fondamentale non solo per documentare gli aspetti di tipo tecnologico legati all’erogazione di una API, ma anche per indirizzare tematiche di tipo organizzativo e di relazione tra l’API Provider e l’Ecosistema.</p>
+<p>Per questo motivo, all’interno del descrittore devono essere indicati:</p>
+<ul class="simple">
+<li>i principali attributi di tipo anagrafico dell’API (nome API, descrizione, nome API provider, versione, tag per classificazione ecc.), importanti al fine di consentire una comprensione generale dell’API anche da parte di interlocutori non tecnici; tali attributi hanno una valenza importante anche a scopo di comunicazione (alcuni attributi di anagrafica delle API saranno infatti resi visibili pubblicamente sui registri di E015 Digital Ecosystem anche da parte di soggetti non aderenti all’iniziativa); in particolare, la descrizione dell’API fornita all’interno del descrittore deve consentire di comprendere al meglio le caratteristiche funzionali dell’API ed il valore potenziale per i soggetti che ne intendono fare uso;</li>
+<li>i riferimenti (nome, cognome, e-mail, numero di telefono) del referente dell’API nei confronti dell’Ecosistema. Tale referente deve avere compreso a pieno le logiche di E015 Digital Ecosystem e deve essere il punto di contatto per il  TMB qualora vi fosse la necessità di indirizzare alcune tematiche di interesse legate all’erogazione dell’API. Le informazioni relative al referente dell’API non saranno rese visibili agli App Provider, ma sono da intendersi <em>ad uso esclusivo del TMB</em>.</li>
+</ul>
+</div>
+<div class="section" id="linee-guida-per-la-pubblicazione-sul-proprio-sito-web-istituzionale-delle-informazioni-sulle-api-di-e015-digital-ecosystem">
+<span id="sezione263"></span><h3>Linee Guida per la pubblicazione sul proprio sito web istituzionale delle informazioni sulle API di E015 Digital Ecosystem<a class="headerlink" href="#linee-guida-per-la-pubblicazione-sul-proprio-sito-web-istituzionale-delle-informazioni-sulle-api-di-e015-digital-ecosystem" title="Link a questa intestazione">¶</a></h3>
+<p>Una volta pubblicato una API all’interno dell’Ecosistema, l’API Provider deve prevedere sul proprio sito web istituzionale una sezione dedicata alla <em>descrizione dell’iniziativa di  partecipazione all’Ecosistema</em> e alla <em>descrizione delle API pubblicate</em> con un link che rimanda al sito web dell’Ecosistema, per il dettaglio delle informazioni delle API pubblicate.</p>
+<p>La presenza o meno di tali informazioni all’interno del sito web istituzionale del API Provider sarà oggetto di verifica da parte del TMB e rappresenterà un aspetto di interesse ai fini dell’accettazione o meno della richiesta di pubblicazione di una nuova API.</p>
+</div>
+</div>
+<div class="section" id="ciclo-di-vita-di-una-api-api-lifecycle">
+<span id="sezione27"></span><h2>Ciclo di vita di una API  (<em>API lifecycle</em>)<a class="headerlink" href="#ciclo-di-vita-di-una-api-api-lifecycle" title="Link a questa intestazione">¶</a></h2>
+<p>Si riportano nella tabella seguente i campi del descrittore dell’API che indirizzano direttamente gli aspetti legati al ciclo di vita dell’API.</p>
+<div class="section" id="gli-aspetti-relativi-al-lifecycle-allinterno-del-descrittore-dell-api">
+<span id="sezione271"></span><h3>Gli aspetti relativi al lifecycle all’interno del descrittore dell” API<a class="headerlink" href="#gli-aspetti-relativi-al-lifecycle-allinterno-del-descrittore-dell-api" title="Link a questa intestazione">¶</a></h3>
+<table border="1" class="docutils align-center" id="id15">
+<caption><span class="caption-text">Campi del descrittore relativi all’API lifecycle</span><a class="headerlink" href="#id15" title="Link a questa tabella">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campo</th>
+<th class="head">Descrizione</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Versione dell’API</td>
+<td><div class="first last line-block">
+<div class="line">Identificativo della versione dell’API</div>
+<div class="line">all’interno dell’Ecosistema</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="first last line-block">
+<div class="line">Riferimento ad</div>
+<div class="line">altre versioni</div>
+<div class="line">dell” API</div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line">Riferimento ad eventuali altre versioni</div>
+<div class="line">dell’API pubblicate all’interno dell’</div>
+<div class="line">Ecosistema. Per ogni riferimento viene</div>
+<div class="line">fornito un changelog delle diverse</div>
+<div class="line">versioni.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="il-ciclo-di-vita-delle-api-di-e015-digital-ecosystem">
+<span id="sezione272"></span><h3>Il ciclo di vita delle API di E015 Digital Ecosystem<a class="headerlink" href="#il-ciclo-di-vita-delle-api-di-e015-digital-ecosystem" title="Link a questa intestazione">¶</a></h3>
+<p>Le API di E015 Digital Ecosystem rappresentano dei “building-block” riusabili messi a disposizione degli App provider per le realizzazione delle applicazioni.</p>
+<p>Al fine di consentire l’erogazione di applicazioni di qualità è importante che:</p>
+<ul class="simple">
+<li>L’API Provider comunichi <em>Major Change</em> non retrocompatibili (cambio tracciato dati, cambio policy, dismissione dell’API) con almeno 6 mesi di preavviso. In questo modo, chi realizza le applicazioni ha la garanzia del  periodo temporale nel corso del quale le API utilizzate saranno effettivamente erogate con continuità.</li>
+<li>Le API pubblicate nell’Ecosistema siano il più possibile stabili, non solo da un punto di vista tecnico, ma anche e soprattutto da un punto di vista della continuità del “business”; un’API nata per esigenze temporanee e che molto probabilmente verrà dismessa nel giro di qualche mese può provocare un significativo impatto sulle applicazioni che ne fanno uso; per questo motivo non potrà essere pubblicata all’interno di E015 Digital Ecosystem, non essendo considerata “stabile”, ovvero non potendo garantire un significativo orizzonte temporale di erogazione.</li>
+</ul>
+<p>Al fine di soddisfare questi importanti requisiti è necessario che tutte le API dell’Ecosistema siano erogate in accordo al <em>“lifecycle”</em> descritto nel seguito:</p>
+<ol class="arabic">
+<li><p class="first">una volta valutata positivamente l’opportunità di pubblicare una API all’interno dell’Ecosistema, l’ API Provider compila il descrittore dell’ API;</p>
+</li>
+<li><p class="first">successivamente alla pubblicazione e all’approvazione del descrittore da parte del TMB, l’API entra nella fase di <em>“erogazione”</em>. Durante questa fase l’API Provider si impegna a mantenere attiva la propria API con continuità, in modo da consentirne un utilizzo prolungato nel tempo da parte delle applicazioni;</p>
+</li>
+<li><p class="first">Nel caso di <em>Major Change non retrocompatibili</em> (fra le quali cambio di policy o dismissione), l’API Provider è tenuto a comunicarlo con un prevviso di 6 mesi. Nell’arco di questi 6 mesi l’API Provider si impegna a mantenere stabile la versione in dismissione. Questa fase consente agli App Provider di poter intervenire sulla proprie applicazioni</p>
+</li>
+<li><p class="first">Una volta effettivamente esaurito il transitorio di 6 mesi può verificarsi una delle seguenti situazioni:</p>
+<blockquote>
+<div><ul class="simple">
+<li>l’API viene definitivamente dismessa e le applicazioni non ne possono più fare uso;</li>
+<li>è stata nel frattempo pubblicata una nuova versione dell’API e l’Ecosistema invia alle applicazioni utilizzatrici una notifica nella quale promuove la migrazione verso la nuova versione;</li>
+<li>l’Ecosistema invia alle applicazioni utilizzatrici una notifica nella quale comunica che l’API sarà ancora disponibile.</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+<p>Generalmente non è possibile dismettere una API prima dei sei mesi, ad eccezione dei seguenti casi:</p>
+<ol class="arabic simple">
+<li>l’API non risulta più in utilizzo da parte di alcuna applicazione (ad esempio, perché tutte le applicazioni utilizzatrici hanno effettuato una migrazione ad una successiva versione);</li>
+<li>eventuali cause di forza maggiore.</li>
+</ol>
+<p>Dal momento che le API di E015 Digital Ecosystem possono essere soggette ad evoluzioni, è necessario prevedere la possibilità da parte dell’API Provider di pubblicare molteplici versioni di una stessa API.</p>
+<p>Le linee guida per la pubblicazione di una nuova versione dell’API sono le seguenti:</p>
+<ol class="arabic">
+<li><p class="first">le evoluzioni dell’API che comportano modifiche di <em>Major Change non retrocompatibili</em> determinano la pubblicazione di nuove versioni tra loro indipendenti. In questo caso:</p>
+<blockquote>
+<div><ul class="simple">
+<li>le nuove versioni di una API devono essere erogate tramite un endpoint dedicato e il loro processo di pubblicazione segue il normale iter previsto per la pubblicazione di una nuova API (in particolare, il campo “Riferimento ad altre versioni dell’API” referenzierà le versioni precedenti);</li>
+<li>le versioni precedenti dell’API continuano ad essere attive e restano a disposizione delle applicazioni, come indicato in <strong>Figura 8 REF VERSIONI</strong>. È possibile pertanto che più versioni della stessa API, le quali differiscono tra loro a livello di interfaccia e/o modello dei dati, siano attive contemporaneamente;</li>
+<li>l’Ecosistema notifica alle applicazioni utilizzatrici la disponibilità di una nuova versione dell’API, promuovendo la migrazione alla versione più recente.</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+<p>2. Le evoluzioni dell’API che NON comportano modifiche all’interfaccia (ad esempio, che determinano un incremento della qualità dei dati erogati) non necessitano della pubblicazione di una nuova versione indipendente.
+In questo caso le modifiche all’API – previa approvazione da parte del TMB – vengono eseguite direttamente sulla stessa istanza dell’API già pubblicata all’interno dell’Ecosistema.
+L’Ecosistema provvede ad inviare delle notifiche ai soggetti utilizzatori, specificando le caratteristiche dell’API oggetto di evoluzione.</p>
+<p><strong>IMMAGINE GESTIONE DELLE API FIG 8</strong></p>
+</div>
+</div>
+<div class="section" id="policies-delle-api">
+<span id="sezione28"></span><h2>Policies delle API<a class="headerlink" href="#policies-delle-api" title="Link a questa intestazione">¶</a></h2>
+<div class="section" id="gli-aspetti-relativi-alle-policy-allinterno-del-descrittore-dellapi">
+<span id="sezione281"></span><h3>Gli aspetti relativi alle policy all’interno del descrittore dell’API<a class="headerlink" href="#gli-aspetti-relativi-alle-policy-allinterno-del-descrittore-dellapi" title="Link a questa intestazione">¶</a></h3>
+<p>Si riportano nella tabella seguente i campi del descrittore dell’API che indirizzano direttamente gli aspetti legati all’interoperabilità delle API.</p>
+<table border="1" class="docutils align-center" id="id16">
+<caption><span class="caption-text">Campi del descrittore relativi all’API lifecycle</span><a class="headerlink" href="#id16" title="Link a questa tabella">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campo</th>
+<th class="head">Descrizione</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><div class="first last line-block">
+<div class="line">Policy generale</div>
+<div class="line">di utilizzo</div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line">Riferimento al documento contenente</div>
+<div class="line">le condizioni di utilizzo dell’API</div>
+<div class="line">valide per tutti i soggetti utilizzatori.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="approccio-dellecosistema-per-la-gestione-delle-policy-delle-api">
+<span id="sezione282"></span><h3>Approccio dell’Ecosistema per la gestione delle policy delle API<a class="headerlink" href="#approccio-dellecosistema-per-la-gestione-delle-policy-delle-api" title="Link a questa intestazione">¶</a></h3>
+<p>E015 Digital Ecosystem prevede che ogni API Provider stabilisca quali condizioni di utilizzo delle API i soggetti debbano impegnarsi a rispettare.
+In particolare, è necessario che per ciascuno delle proprie API pubblicate l’API Provider specifichi all’interno del descrittore le relative <strong>Policy generali di utilizzo</strong>.</p>
+<p>Tali policy indicano le condizioni di utilizzo dell’API comuni per tutti gli App Provider e devono essere accettate da parte di ogni soggetto utilizzatore che intende utilizzare la specifica API.
+Se non rispettate, possono comportare l’inibizione da parte dell’API provider dell’accesso alla propria API.</p>
+<p>In generale i soggetti aderenti godono della massima autonomia nella definizione di dettaglio di queste policy; il TMB fornisce un supporto indicando eventualmente possibili modelli di riferimento o segnalando eventuali situazioni che comportano un potenziale ridotto utilizzo delle API esposte. Esempi di possibili elementi contenuti all’interno delle policy generali / specifiche di utilizzo sono:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Proprietà dei dati erogati dalle API.</li>
+<li>Possibilità di manipolare e/o modificare i dati erogati dalle API.</li>
+<li>Clausole per l’utilizzo e la visualizzazione parziale dei dati erogati dall’API.</li>
+<li>Clausole relative all’aggiornamento delle informazioni (Es: obbligo di mostrare agli utenti l’ora di aggiornamento).</li>
+<li><dl class="first docutils">
+<dt>Eventuale riferimento a framework di licensing già esistenti. Ad esempio:</dt>
+<dd><ul class="first last">
+<li>Creative Commons.</li>
+<li>Italian Open Data License.</li>
+<li>…</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>Clausole di esonero di responsabilità.</li>
+<li>Clausole in merito alla storicizzazione delle informazioni erogate dalle API.</li>
+<li>Eventuale riferimento al codice etico dell’API Provider.</li>
+<li>Clausole relative alla privacy e alla eventuale gestione di dati sensibili.</li>
+<li>Possibilità di visualizzare messaggi di tipo pubblicitario contestualmente alle informazioni erogate dalle API.</li>
+<li><dl class="first docutils">
+<dt>Obbligo di citare il soggetto erogatore delle informazioni:</dt>
+<dd><ul class="first last">
+<li>semplice citazione testuale;</li>
+<li>utilizzo di un logo.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>Clausole relative ad eventuali sospensioni dell’erogazione dell’API.</li>
+<li>Altro</li>
+</ul>
+</div></blockquote>
+<p>In <a class="reference internal" href="#licenze"><span class="std std-ref">Figura 2.9</span></a> è riportata una schematizzazione esemplificativa relativa a possibili framework di licensing già disponibili che gli API provider potrebbero decidere di referenziare e adottare all’interno delle proprie policy. Ad esempio:</p>
+<ol class="arabic simple">
+<li>per quanto concerne i <em>contenuti</em> erogati dalle API (file audio, immagini, video) è possibile utilizzare le licenze <em>Creative Commons</em>; nel caso in cui si volesse adottare un modello di licensing chiuso, gli API Provider possono decidere di proteggere i propri contenuti con diritti di copyright;</li>
+<li>per quanto concerne i dati messi a disposizione (ad esempio, file corrispondenti a intere banche dati) è possibile utilizzare le licenze <em>Open Data Commons</em>; nel caso in cui si volesse adottare un modello di licensing chiuso, gli API Provider possono decidere di proteggere i propri dati con diritti di copyright;</li>
+<li>per quanto concerne le API, è necessario definire all’interno delle Policy generali e all’interno delle Policy specifiche quali siano i Termini delle API previste.</li>
+</ol>
+<div class="figure align-center" id="id17">
+<span id="licenze"></span><a class="reference internal image-reference" href="_images/licensing.png"><img alt="_images/licensing.png" src="_images/licensing.png" style="width: 1182.4px; height: 563.2px;" /></a>
+<p class="caption"><span class="caption-text">Figura 2.9: Esempi di modelli di licensing adottabili in E015 Digital Ecosystem</span></p>
+</div>
+<p class="rubric">Footnotes</p>
+<table class="docutils footnote" frame="void" id="f1" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Anche in questo caso, è necessario che l’API provider comunichi all’Ecosistema l’avvenuta revoca dell’accesso.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="f2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>In generale è auspicabile l’acquisizione dei certificati presso authority esterne; al fine di garantire l’inclusività di un ampio numero di soggetti, E015 – Digital Ecosystem consente comunque l’uso di certificati auto generati.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="f3" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[3]</a></td><td>Si precisa che le dichiarazioni riportate nel campo “Impegni / capacità di erogazione” hanno carattere puramente indicativo e non rappresentano un vincolo per l’ API Provider.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+                        </div>
+                        <div class="articleComments">
+                            
+                        </div>
+                    </div>
+                    <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        2017, CEFRIEL.
+
+    </p>
+  </div>
+  Generato con <a href="http://sphinx-doc.org/">Sphinx</a> usando il tema ufficiale <a href="https://github.com/italia/sphinx_italia_theme">Italia</a> basato sul <a href="https://github.com/snide/sphinx_rtd_theme">tema</a> fornito da <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+    
+     
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT: './',
+            VERSION: '0.0.1',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE: true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>   
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+      
+    <script type="text/javascript">
+        jQuery(function() {
+            SphinxRtdTheme.StickyNav.enable();
+        });
+    </script>
+     
+
+</body>
+
+</html>
